@@ -1,0 +1,44 @@
+package edu.duke.gg147.battleship;
+
+/**
+ * This class handles textual display of
+ * a Board (i.e., converting it to a string to show
+ * to the user).
+ * It supports two ways to display the Board:
+ * one for the player's own board, and one for the 
+ * enemy's board.
+ */
+public class BoardTextView {
+  // board to be displayed
+  private final Board toDisplay;
+
+  /** displays the given board 
+   *  @param toDisplay : board
+   * @throws IllegalArgumentException if the board is larger than 10x26.
+  **/
+  public BoardTextView(Board toDisplay) {
+    this.toDisplay = toDisplay;
+    if (toDisplay.getWidth() > 10 || toDisplay.getHeight() > 26) {
+      throw new IllegalArgumentException("Board must be no larger than 10x26, but input :  " + toDisplay.getWidth() + "x" + toDisplay.getHeight());
+    }
+  }
+
+  public String displayMyOwnBoard() {
+    return ""; //this is a placeholder for the moment
+  }
+
+  /*function returns the header eg: 0|1|2|3|4\n
+    @return the String format of header 
+  */
+  String makeHeader(){
+    StringBuilder ans = new StringBuilder("  ");
+    String sep = "";
+    for(int i = 0; i < toDisplay.getWidth(); i++){
+      ans.append(sep);
+      ans.append(i);
+      sep = "|";
+    }
+    ans.append("\n");
+    return ans.toString();
+  }
+}

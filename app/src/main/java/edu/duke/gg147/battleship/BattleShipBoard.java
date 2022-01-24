@@ -5,18 +5,17 @@ public class BattleShipBoard implements Board{
   private final int height;
 
   /**
-   * Constructs a BattleShipBoard with the specified width
-   * and height
-   * @param w is the width of the newly constructed board.
-   * @param h is the height of the newly constructed board.
+   * Constructs a BattleShipBoard with the specified width and height
+   * @param w : width
+   * @param h : height   
    * @throws IllegalArgumentException if the width or height are less than or equal to zero.
    */
   BattleShipBoard(int w, int h){
     if(w <= 0){
-      throw new IllegalArgumentException("BattleShipBoard's width must be positive but is " + w);
+      throw new IllegalArgumentException("BattleShipBoard's width must be > 0 but input : " + w);
     }
     if (h <= 0) {
-      throw new IllegalArgumentException("BattleShipBoard's height must be positive but is " + h);
+      throw new IllegalArgumentException("BattleShipBoard's height must be > 0 but input : " + h);
     }
     
     this.width = w;
