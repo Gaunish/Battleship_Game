@@ -1,0 +1,20 @@
+package edu.duke.gg147.battleship;
+
+public class BattleShipBoard {
+  private final int width;
+  private final int height;
+
+  BattleShipBoard(int w, int h){
+
+    this.width = w;
+    this.height = h;
+  }
+  
+  public int getWidth(){
+    return width;
+  }
+
+  public int getHeight(){
+    return height;
+  }
+}

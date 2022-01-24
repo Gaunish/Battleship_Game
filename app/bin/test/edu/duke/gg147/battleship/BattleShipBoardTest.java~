@@ -1,0 +1,15 @@
+package edu.duke.gg147.battleship;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class BattleShipBoardTest {
+  @Test
+  public void test_width_and_height() {
+    BattleShipBoard b = new BattleShipBoard(3, 4);
+    assertEquals(3, b.getWidth());
+    assertEquals(4, b.getHeight());
+  }
+
+}
