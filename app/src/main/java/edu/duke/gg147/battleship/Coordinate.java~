@@ -1,0 +1,51 @@
+package edu.duke.gg147.battleship;
+
+/** Coordinate class to represent (x,y) in board
+    = (row, col)
+    @param row - x
+    @param col - y
+**/
+public class Coordinate {
+  private final int row, col;
+
+  //constructor to init the class
+  Coordinate(int row, int col){
+    this.row = row;
+    this.col = col;
+  }
+
+  //getter method for row
+  public int get_row(){
+    return row;
+  }
+
+  //getter method for col
+  public int get_col(){
+    return col;
+  }
+
+  //method to check whether this is equal to o
+   @Override
+   public boolean equals(Object o) {
+     //check if o has exactle same class as this
+     if (o.getClass().equals(getClass())) {
+       Coordinate c = (Coordinate) o;
+       return row == c.row && col == c.col;
+     }
+     return false;
+   }
+
+  //method to return hash of the object
+  //for use in hashmap
+  @Override
+  public int hashCode(){
+    //strings have good hash
+    return toString().hashCode();
+  }
+
+  //method to return string rep of obj
+  @Override
+  public String toString() {
+    return "("+row+", " + col +")";
+  }
+}
