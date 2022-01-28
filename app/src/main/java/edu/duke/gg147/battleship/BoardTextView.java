@@ -27,31 +27,55 @@ public class BoardTextView {
   public String displayMyOwnBoard() {
     StringBuilder ans = new StringBuilder("");
     ans.append(makeHeader());
-    ans.append(makeRow());
+    ans.append(makeRows());
     ans.append(makeHeader());
     return ans.toString();
   }
-  
-  /* function returns the rows between headers eg: A  | | | |   A\n
-     @return the String format of row
-   */
-  public String makeRow(){
-    StringBuilder ans = new StringBuilder("");
-    String sep = " |";
-    char letter = 'A';
-    //print row by row
-    for(int i = 0; i < toDisplay.getHeight(); i++){
+
+  /**Private function to make row in makeRows
+   **/
+  private void makeRow(StringBuilder ans, char letter, int col){
+      //append first letter, eg: A  |
       ans.append(letter);
       ans.append(" ");
 
-      //print seperators |
-      for(int j = 1; j < toDisplay.getWidth(); j++){
+      //append seperators
+      //append ship displayInfo, if ship occupies the position
+      //eg A  | |s| |  A
+      String sep = ""; 
+      for(int row = 0; row < toDisplay.getWidth(); row++){
         ans.append(sep);
+
+        //get what to display at cood via whatIsAt function
+        //if null, append " "
+        Character c = toDisplay.whatIsAt(new Coordinate(row, col));
+        if(c == null){
+          ans.append(" ");
+        }
+        else{
+          ans.append(c);
+        }
+        
+        sep = "|";
       }
       
-      ans.append("  ");
+
+      //append last letter, eg: |  A
+      ans.append(" ");
       ans.append(letter);
       ans.append("\n");
+  }
+  
+  /** function returns the rows between headers eg: A  | | | |   A\n
+     @returns the String format of row
+  **/
+  public String makeRows(){
+    StringBuilder ans = new StringBuilder("");
+    char letter = 'A';
+
+    //print row by row
+    for(int col = 0; col < toDisplay.getHeight(); col++){
+      makeRow(ans, letter, col);
       letter++;
     }
     return ans.toString();
@@ -63,9 +87,9 @@ public class BoardTextView {
   public String makeHeader(){
     StringBuilder ans = new StringBuilder("  ");
     String sep = "";
-    for(int i = 0; i < toDisplay.getWidth(); i++){
+    for(int row = 0; row < toDisplay.getWidth(); row++){
       ans.append(sep);
-      ans.append(i);
+      ans.append(row);
       sep = "|";
     }
     ans.append("\n");

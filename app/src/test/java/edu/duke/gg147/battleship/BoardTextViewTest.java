@@ -14,7 +14,7 @@ public class BoardTextViewTest {
     assertEquals(expectedHeader, view.makeHeader());
 
     String expectedRow = "A  |  A\n"+ "B  |  B\n";
-    assertEquals(expectedRow, view.makeRow()); 
+    assertEquals(expectedRow, view.makeRows()); 
     String expected=
                 expectedHeader+
                 expectedRow+
@@ -31,6 +31,7 @@ public class BoardTextViewTest {
     assertThrows(IllegalArgumentException.class, () -> new BoardTextView(tallBoard)); 
   }
 
+  //helper function to test empty boards
   private void emptyBoardHelper(int w, int h, String expectedHeader, String Body){
     Board<Character> b1 = new BattleShipBoard<Character>(w, h);
     BoardTextView view = new BoardTextView(b1);
@@ -53,4 +54,44 @@ public class BoardTextViewTest {
    emptyBoardHelper(3, 5, header, body);
  }
 
+  //helper function to test boards with ships
+  private void BoardHelper(Board<Character> b, String expectedHeader, String Body){
+    BoardTextView view = new BoardTextView(b);
+    assertEquals(expectedHeader, view.makeHeader());
+    String expected = expectedHeader + Body + expectedHeader;
+    assertEquals(expected, view.displayMyOwnBoard());
+  }
+
+
+  //helper function to add ship
+  private void add_ship(Board<Character> b, int row, int col){
+   Coordinate c = new Coordinate(row, col);
+   Ship<Character> s = new BasicShip(c);
+   b.tryAddShip(s);
+  }
+  
+ @Test
+ public void test_display_ships(){
+   Board<Character> b = new BattleShipBoard<>(4, 3);
+   String header = "  0|1|2|3\n";
+   String body;
+
+   add_ship(b, 3, 2);
+   body = "A  | | |  A\n" + "B  | | |  B\n" + "C  | | |s C\n" ;
+   BoardHelper(b, header, body);
+
+   add_ship(b, 0, 0);
+   body = "A s| | |  A\n" + "B  | | |  B\n" + "C  | | |s C\n" ;
+   BoardHelper(b, header, body);
+
+   add_ship(b, 2, 1);
+   body = "A s| | |  A\n" + "B  | |s|  B\n" + "C  | | |s C\n" ;
+   BoardHelper(b, header, body);
+
+   add_ship(b, 1, 0);
+   body = "A s|s| |  A\n" + "B  | |s|  B\n" + "C  | | |s C\n" ;
+   BoardHelper(b, header, body);
+
+   
+ }
 }
