@@ -15,10 +15,10 @@ public class Coordinate {
     this.col = col;
   }
 
-  /*constructor to init the class
-   *given a string, for eg: A5 -> (0, 5)
-   * @throws IllegalArgumentException if desc is not valid 
-  */
+  /**constructor to init the class
+   given a string, for eg: A5 - (0, 5)
+   @throws IllegalArgumentException if desc is not valid 
+   **/
   Coordinate(String desc){
     if(desc.length() != 2){
       throw new IllegalArgumentException("Input length is invalid, found length : " + desc.length());
