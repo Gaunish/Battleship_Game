@@ -1,0 +1,3 @@
+Main files : app/bin/main/edu/duke/gg147/battleship/
+
+Test files : app/bin/test/edu/duke/gg147/battleship
