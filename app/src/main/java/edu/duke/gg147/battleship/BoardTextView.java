@@ -10,13 +10,13 @@ package edu.duke.gg147.battleship;
  */
 public class BoardTextView {
   // board to be displayed
-  private final Board toDisplay;
+  private final Board<Character> toDisplay;
 
   /** displays the given board 
    *  @param toDisplay : board
    * @throws IllegalArgumentException if the board is larger than 10x26.
   **/
-  public BoardTextView(Board toDisplay) {
+  public BoardTextView(Board<Character> toDisplay) {
     this.toDisplay = toDisplay;
     if (toDisplay.getWidth() > 10 || toDisplay.getHeight() > 26) {
       throw new IllegalArgumentException("Board must be no larger than 10x26, but input :  " + toDisplay.getWidth() + "x" + toDisplay.getHeight());
