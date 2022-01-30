@@ -49,13 +49,13 @@ public class Placement {
     return this.where;
   }
   
-  //method to check whether this is equal to o                                                                                                                     
+  //method to check whether this is equal to o
    @Override
    public boolean equals(Object o) {
      //check if o has exact same class as this  
      if (o.getClass().equals(getClass())) {
        Placement p = (Placement) o;
-       return orientation == p.orientation && where == p.where;
+       return orientation == p.orientation && where.equals(p.where);
      }
      return false;
    }

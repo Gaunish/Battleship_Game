@@ -48,7 +48,7 @@ public class BoardTextView {
 
         //get what to display at cood via whatIsAt function
         //if null, append " "
-        Character c = toDisplay.whatIsAt(new Coordinate(row, col));
+        Character c = toDisplay.whatIsAt(new Coordinate(col, row));
         if(c == null){
           ans.append(" ");
         }

@@ -64,8 +64,8 @@ public class BoardTextViewTest {
 
 
   //helper function to add ship
-  private void add_ship(Board<Character> b, int row, int col){
-   Coordinate c = new Coordinate(row, col);
+  private void add_ship(Board<Character> b, int col, int row){
+   Coordinate c = new Coordinate(col, row);
    Ship<Character> s = new BasicShip(c);
    b.tryAddShip(s);
   }
@@ -76,7 +76,7 @@ public class BoardTextViewTest {
    String header = "  0|1|2|3\n";
    String body;
 
-   add_ship(b, 3, 2);
+   add_ship(b, 2, 3);
    body = "A  | | |  A\n" + "B  | | |  B\n" + "C  | | |s C\n" ;
    BoardHelper(b, header, body);
 
@@ -84,11 +84,11 @@ public class BoardTextViewTest {
    body = "A s| | |  A\n" + "B  | | |  B\n" + "C  | | |s C\n" ;
    BoardHelper(b, header, body);
 
-   add_ship(b, 2, 1);
+   add_ship(b, 1, 2);
    body = "A s| | |  A\n" + "B  | |s|  B\n" + "C  | | |s C\n" ;
    BoardHelper(b, header, body);
 
-   add_ship(b, 1, 0);
+   add_ship(b, 0, 1);
    body = "A s|s| |  A\n" + "B  | |s|  B\n" + "C  | | |s C\n" ;
    BoardHelper(b, header, body);
 

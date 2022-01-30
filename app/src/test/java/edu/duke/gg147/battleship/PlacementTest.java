@@ -20,7 +20,7 @@ public class PlacementTest {
     Coordinate c1 = new Coordinate("A9");
     Placement p1 = new Placement(c1, 'V');
     Coordinate c2 = new Coordinate("a9");
-    Placement p2 = new Placement(c1, 'v');
+    Placement p2 = new Placement(c2, 'v');
     Coordinate c3 = new Coordinate("B8");
     Placement p3 = new Placement(c3, 'H');
 

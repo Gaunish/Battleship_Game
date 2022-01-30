@@ -47,15 +47,15 @@ public class Coordinate {
   }
 
   //method to check whether this is equal to o
-   @Override
-   public boolean equals(Object o) {
-     //check if o has exactle same class as this
-     if (o.getClass().equals(getClass())) {
-       Coordinate c = (Coordinate) o;
-       return row == c.row && col == c.col;
-     }
-     return false;
-   }
+  @Override
+  public boolean equals(Object o) {
+    //check if o has exactle same class as this
+    if (o.getClass().equals(getClass())) {
+      Coordinate c = (Coordinate) o;
+      return row == c.row && col == c.col;
+    }
+    return false;
+  }
 
   //method to return hash of the object
   //for use in hashmap
