@@ -21,7 +21,7 @@ public class NoCollisionRuleCheckerTest {
     assertEquals(false, check.checkMyRule(s, b));
     assertEquals(true, check.checkMyRule(s1, b));
     b.tryAddShip(s1);
-    assertEquals(false, check.checkMyRule(s1, b));
+    assertEquals(true, check.checkMyRule(s1, b));
     assertEquals(false, check.checkMyRule(s2, b));
   }
 

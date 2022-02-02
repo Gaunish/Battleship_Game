@@ -23,14 +23,14 @@ public class BattleShipBoard<T> implements Board<T>{
     
     this.width = w;
     this.height = h;
-    this.placementChecker = p;
+    PlacementRuleChecker<T> r = new NoCollisionRuleChecker<T>(p);
+    this.placementChecker = r;
     myShips = new ArrayList<>();
   }
 
   public BattleShipBoard(int w, int h) {
     this(w, h, new InBoundsRuleChecker<T>(null));
   }
-
 
   //getter method for width
   public int getWidth(){
@@ -46,6 +46,9 @@ public class BattleShipBoard<T> implements Board<T>{
      @return True if successful
   **/
   public boolean tryAddShip(Ship<T> toAdd){
+    if(placementChecker.checkPlacement(toAdd, this) == false){
+      return false;
+    }
     myShips.add(toAdd);
     return true;
   }

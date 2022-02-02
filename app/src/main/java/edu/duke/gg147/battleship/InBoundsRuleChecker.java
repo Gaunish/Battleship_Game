@@ -16,7 +16,7 @@ public class InBoundsRuleChecker<T> extends PlacementRuleChecker<T> {
 
     for(Coordinate c: coords){
       //check bounds
-      if(c.getRow() < 0 || c.getRow() >= theBoard.getWidth() || c.getColumn() < 0 || c.getColumn() >= theBoard.getHeight()){
+      if(c.getRow() < 0 || c.getRow() >= theBoard.getHeight() || c.getColumn() < 0 || c.getColumn() >= theBoard.getWidth()){
         return false;
       }
     }
