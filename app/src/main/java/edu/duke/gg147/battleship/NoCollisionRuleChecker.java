@@ -1,10 +1,9 @@
 package edu.duke.gg147.battleship;
 
-//Class checks whether coordinate of placement is in bounds of board
-public class InBoundsRuleChecker<T> extends PlacementRuleChecker<T> {
-
+//Class checks ship placement does not collide with any other ship
+public class NoCollisionRuleChecker <T> extends PlacementRuleChecker<T> {
   //constructor to init class
-  public InBoundsRuleChecker(PlacementRuleChecker<T> next) {
+  public NoCollisionRuleChecker(PlacementRuleChecker<T> next) {
     super(next);
   }
   
@@ -15,13 +14,13 @@ public class InBoundsRuleChecker<T> extends PlacementRuleChecker<T> {
     Iterable<Coordinate> coords = theShip.getCoordinates();
 
     for(Coordinate c: coords){
-      //check bounds
-      if(c.getRow() < 0 || c.getRow() >= theBoard.getWidth() || c.getColumn() < 0 || c.getColumn() >= theBoard.getHeight()){
+      //check if any ship occupies coordinate c 
+      if(theBoard.whatIsAt(c) != null){
         return false;
       }
     }
 
     return true;
   }
-
+  
 }
