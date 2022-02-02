@@ -5,7 +5,7 @@ import java.util.HashMap;
 /** this is a a Placeholder class that just occupies one square
     @param myLocation : Coordinate for location 
 **/
-public class BasicShip<T> implements Ship<T>{
+public abstract class BasicShip<T> implements Ship<T>{
   //Tracks location of ship, Null -> not present, true -> hit
   protected HashMap<Coordinate, Boolean> myPieces;
   //display info of ship
@@ -70,5 +70,5 @@ public class BasicShip<T> implements Ship<T>{
      boolean isHit = wasHitAt(where);
      return myDisplayInfo.getInfo(where, isHit);
   }
-  
+
 }

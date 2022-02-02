@@ -61,7 +61,7 @@ class AppTest {
       app.doOnePlacement();
       String out = "Where would you like to put your ship?\n";
       String header = "  0|1|2\n";
-      String body = "A  | |  A\n"+ "B  | |s B\n"+ "C  | |  C\n"+ "D  | |  D\n"+ "E  | |  E\n";
+      String body = "A  | |  A\n"+ "B  | |d B\n"+ "C  | |d C\n"+ "D  | |d D\n"+ "E  | |  E\n";
   
       out += header + body + header + "\n";
       assertEquals(out, bytes.toString());
