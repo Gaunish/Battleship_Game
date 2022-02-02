@@ -66,7 +66,7 @@ public class BoardTextViewTest {
   //helper function to add ship
   private void add_ship(Board<Character> b, int col, int row){
    Coordinate c = new Coordinate(col, row);
-   Ship<Character> s = new BasicShip(c);
+   Ship<Character> s = new RectangleShip<Character>(c, 's', '*');;
    b.tryAddShip(s);
   }
   

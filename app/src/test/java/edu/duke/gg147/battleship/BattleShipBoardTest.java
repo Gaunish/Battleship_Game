@@ -69,19 +69,19 @@ public class BattleShipBoardTest {
     checkWhatIsAtBoard(b, expected);
 
     Coordinate c = new Coordinate(5, 21);
-    Ship<Character> s = new BasicShip(c);
+    Ship<Character> s = new RectangleShip<Character>(c, 's', '*');
     check_ops(b, c, s, 's', expected, true);
 
     Coordinate c1 = new Coordinate(9, 25);
-    Ship<Character> s1 = new BasicShip(c1);
+    Ship<Character> s1 = new RectangleShip<Character>(c1, 's', '*');
     check_ops(b, c1, s1, 's', expected, true);
 
     Coordinate c2 = new Coordinate(0, 0);
-    Ship<Character> s2 = new BasicShip(c2);
+    Ship<Character> s2 = new RectangleShip<Character>(c2, 's', '*');
     check_ops(b, c2, s2, 's', expected, true);
 
     Coordinate c3 = new Coordinate(9, 21);
-    Ship<Character> s3 = new BasicShip(c3);
+    Ship<Character> s3 = new RectangleShip<Character>(c3, 's', '*');
     check_ops(b, c3, s3, 's', expected, true);
 
   }
