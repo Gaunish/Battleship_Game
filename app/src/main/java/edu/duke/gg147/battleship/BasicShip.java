@@ -25,37 +25,50 @@ public class BasicShip<T> implements Ship<T>{
     this.myDisplayInfo = myDisplayInfo;
   }
 
+  //Checks if coord in ship
+  //throws IllegalArgumentException if not present
+  protected void checkCoordinateInThisShip(Coordinate c){
+    if(occupiesCoordinates(c) == false){
+      throw new IllegalArgumentException("Coordinate: " + c.toString() + " not found in ship");
+    }
+  }
+
   //checks whether ship occupies coord where
   @Override
   public boolean occupiesCoordinates(Coordinate where) {
     return myPieces.containsKey(where);
   }
 
+  //checks if ship is sunk
   @Override
   public boolean isSunk() {
-    // TODO Auto-generated method stub
-    return false;
+    return myPieces.containsValue(false) == false;
   }
 
+  //checks if cood in ship then records hit at cood where
+  //throws IllegalArgumentException if not present 
   @Override
   public void recordHitAt(Coordinate where) {
-    // TODO Auto-generated method stub
-    
+     checkCoordinateInThisShip(where);
+
+     myPieces.replace(where, true);
   }
 
+  //checks if cood in ship then check if hit at cood where
+  //throws IllegalArgumentException if not present 
   @Override
   public boolean wasHitAt(Coordinate where) {
-    // TODO Auto-generated method stub
-    return false;
+     checkCoordinateInThisShip(where);
+
+     return myPieces.get(where);
   }
 
+  //get display info of coord where
+  //throws IllegalArgumentException if not present 
   @Override
-  public T  getDisplayInfoAt(Coordinate where) {
-    // TODO Auto-generated method stub
-    //TODO this is not right.  We need to
-    //look up the hit status of this coordinate
-    return myDisplayInfo.getInfo(where, false);
-  
+  public T getDisplayInfoAt(Coordinate where) {
+     boolean isHit = wasHitAt(where);
+     return myDisplayInfo.getInfo(where, isHit);
   }
   
 }
