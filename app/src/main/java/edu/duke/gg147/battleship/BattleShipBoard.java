@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class BattleShipBoard<T> implements Board<T>{
   private final int width;
   private final int height;
+  private final PlacementRuleChecker<T> placementChecker;
   final ArrayList<Ship<T>> myShips;
   /**
    * Constructs a BattleShipBoard with the specified width and height
@@ -12,7 +13,7 @@ public class BattleShipBoard<T> implements Board<T>{
    * @param h : height   
    * @throws IllegalArgumentException if the width or height are less than or equal to zero.
    */
-  BattleShipBoard(int w, int h){
+  BattleShipBoard(int w, int h, PlacementRuleChecker<T> p){
     if(w <= 0){
       throw new IllegalArgumentException("BattleShipBoard's width must be > 0 but input : " + w);
     }
@@ -22,8 +23,14 @@ public class BattleShipBoard<T> implements Board<T>{
     
     this.width = w;
     this.height = h;
+    this.placementChecker = p;
     myShips = new ArrayList<>();
   }
+
+  public BattleShipBoard(int w, int h) {
+    this(w, h, new InBoundsRuleChecker<T>(null));
+  }
+
 
   //getter method for width
   public int getWidth(){

@@ -71,4 +71,8 @@ public abstract class BasicShip<T> implements Ship<T>{
      return myDisplayInfo.getInfo(where, isHit);
   }
 
+  //get coordinates that ship occupies
+  public Iterable<Coordinate> getCoordinates(){
+    return myPieces.keySet();
+  }
 }

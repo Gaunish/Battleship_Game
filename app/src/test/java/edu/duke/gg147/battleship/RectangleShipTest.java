@@ -53,8 +53,14 @@ public class RectangleShipTest {
     int width = 2;
     int height = 3;
 
-    RectangleShip<Character> t = new RectangleShip<Character>("hi", cood, width, height, 's', '*');
+    BasicShip<Character> t = new RectangleShip<Character>("hi", cood, width, height, 's', '*');
 
+    //Test getCoordinates
+    Iterable<Coordinate> test_set = t.getCoordinates(); 
+    for(Coordinate c : test_set){
+      assertEquals(true, t.occupiesCoordinates(c));
+    }
+    
     //check whether each coordinate is occupied
     add_cood(1, 2, t);
     add_cood(2, 2, t);
@@ -71,7 +77,7 @@ public class RectangleShipTest {
   }
 
   //private function to check whether ship contains coordinate
-  private void add_cood(int row, int col, RectangleShip<Character> t){
+  private void add_cood(int row, int col, BasicShip<Character> t){
     Coordinate cood = new Coordinate(row, col);
     assertEquals(true, t.occupiesCoordinates(cood));
   }
