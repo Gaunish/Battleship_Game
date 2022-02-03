@@ -10,9 +10,12 @@ public abstract class BasicShip<T> implements Ship<T>{
   protected HashMap<Coordinate, Boolean> myPieces;
   //display info of ship
   protected ShipDisplayInfo<T> myDisplayInfo;
+  //Method to display enemy board info
+  protected ShipDisplayInfo<T> enemyDisplayInfo;
+
     
   //Constructor to init all coords in where to false (ship locations) & displayinfo
-  public BasicShip(Iterable<Coordinate> where, ShipDisplayInfo<T> myDisplayInfo){
+  public BasicShip(Iterable<Coordinate> where, ShipDisplayInfo<T> myDisplayInfo, ShipDisplayInfo<T> enemyDisplayInfo){
     //init myPieces
     myPieces = new HashMap<Coordinate, Boolean>();
     
@@ -21,8 +24,9 @@ public abstract class BasicShip<T> implements Ship<T>{
       myPieces.put(c, false);
     }
 
-    //init display
+    //init displays
     this.myDisplayInfo = myDisplayInfo;
+    this.enemyDisplayInfo = enemyDisplayInfo;
   }
 
   //Checks if coord in ship
@@ -66,13 +70,21 @@ public abstract class BasicShip<T> implements Ship<T>{
   //get display info of coord where
   //throws IllegalArgumentException if not present 
   @Override
-  public T getDisplayInfoAt(Coordinate where) {
-     boolean isHit = wasHitAt(where);
+  public T getDisplayInfoAt(Coordinate where, boolean myShip) {
+    boolean isHit = wasHitAt(where);
+
+    //Own ship
+    if(myShip == true){
      return myDisplayInfo.getInfo(where, isHit);
+    }
+
+    //enemy ship    
+    return enemyDisplayInfo.getInfo(where, isHit);
   }
 
   //get coordinates that ship occupies
   public Iterable<Coordinate> getCoordinates(){
     return myPieces.keySet();
   }
+
 }

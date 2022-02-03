@@ -23,8 +23,8 @@ public class App {
   //creates the two player and call constructor
   //shared buffer, printstream
   public static void main(String[] args) throws IOException{
-    Board<Character> b1 = new BattleShipBoard<Character>(10, 20);
-    Board<Character> b2 = new BattleShipBoard<Character>(10, 20);
+    Board<Character> b1 = new BattleShipBoard<Character>(10, 20, 'X');
+    Board<Character> b2 = new BattleShipBoard<Character>(10, 20, 'X');
 
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     V1ShipFactory factory = new V1ShipFactory();

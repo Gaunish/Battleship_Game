@@ -1,5 +1,7 @@
 package edu.duke.gg147.battleship;
 
+import java.util.function.Function;
+
 /**
  * This class handles textual display of
  * a Board (i.e., converting it to a string to show
@@ -23,18 +25,28 @@ public class BoardTextView {
     }
   }
 
-  /* function to display board in text mode */
+  /* function to display own board in text mode */
   public String displayMyOwnBoard() {
+    return displayAnyBoard((c)->toDisplay.whatIsAtForSelf(c));
+  }
+
+  /* function to display enemy board in text mode */
+  public String displayMyEnemyBoard() {
+    return displayAnyBoard((c)->toDisplay.whatIsAtForEnemy(c));
+  }
+
+  //method to Display own/enemy board
+  protected String displayAnyBoard(Function<Coordinate, Character> getSquareFn){
     StringBuilder ans = new StringBuilder("");
     ans.append(makeHeader());
-    ans.append(makeRows());
+    ans.append(makeRows(getSquareFn));
     ans.append(makeHeader());
     return ans.toString();
   }
 
   /**Private function to make row in makeRows
    **/
-  private void makeRow(StringBuilder ans, char letter, int col){
+  private void makeRow(StringBuilder ans, char letter, int col, Function<Coordinate, Character> getSquareFn){
       //append first letter, eg: A  |
       ans.append(letter);
       ans.append(" ");
@@ -48,7 +60,7 @@ public class BoardTextView {
 
         //get what to display at cood via whatIsAt function
         //if null, append " "
-        Character c = toDisplay.whatIsAt(new Coordinate(col, row));
+        Character c = getSquareFn.apply(new Coordinate(col, row));
         if(c == null){
           ans.append(" ");
         }
@@ -69,13 +81,13 @@ public class BoardTextView {
   /** function returns the rows between headers eg: A  | | | |   A\n
      @returns the String format of row
   **/
-  public String makeRows(){
+  public String makeRows(Function<Coordinate, Character> getSquareFn){
     StringBuilder ans = new StringBuilder("");
     char letter = 'A';
 
     //print row by row
     for(int col = 0; col < toDisplay.getHeight(); col++){
-      makeRow(ans, letter, col);
+      makeRow(ans, letter, col, getSquareFn);
       letter++;
     }
     return ans.toString();

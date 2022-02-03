@@ -23,7 +23,7 @@ public class TextPlayerTest {
       ByteArrayOutputStream bytes = new ByteArrayOutputStream();
  
       //Init board, app
-      Board<Character> b = new BattleShipBoard<Character>(10, 20);
+      Board<Character> b = new BattleShipBoard<Character>(10, 20, 'X');
    
       TextPlayer player = createTextPlayer(10, 20, "B2V\nC8H\na4v\n", bytes);
 
@@ -49,7 +49,7 @@ public class TextPlayerTest {
   private TextPlayer createTextPlayer(int w, int h, String inputData, OutputStream bytes) {
     BufferedReader input = new BufferedReader(new StringReader(inputData));
     PrintStream output = new PrintStream(bytes, true);
-    Board<Character> board = new BattleShipBoard<Character>(w, h);
+    Board<Character> board = new BattleShipBoard<Character>(w, h, 'X');
     V1ShipFactory shipFactory = new V1ShipFactory();
     return new TextPlayer("A", board, input, output, shipFactory);
   }

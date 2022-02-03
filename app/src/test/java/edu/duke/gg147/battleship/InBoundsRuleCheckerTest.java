@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class InBoundsRuleCheckerTest {
   @Test
   public void test_inBounds() {
-    BattleShipBoard<Character> b = new BattleShipBoard<Character>(8, 10);
+    BattleShipBoard<Character> b = new BattleShipBoard<Character>(8, 10, 'X');
     InBoundsRuleChecker<Character> check = new InBoundsRuleChecker<Character>(null);
 
     V1ShipFactory factory = new V1ShipFactory();

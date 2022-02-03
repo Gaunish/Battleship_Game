@@ -9,7 +9,7 @@ public class NoCollisionRuleCheckerTest {
   //Individual tests for no collision 
   @Test
   public void test_noCollison() {
-    BattleShipBoard<Character> b = new BattleShipBoard<Character>(10, 10);
+    BattleShipBoard<Character> b = new BattleShipBoard<Character>(10, 10, 'X');
     NoCollisionRuleChecker<Character> check = new NoCollisionRuleChecker<Character>(null);
 
     V1ShipFactory factory = new V1ShipFactory();
@@ -27,7 +27,7 @@ public class NoCollisionRuleCheckerTest {
   //Combined tests for no collision 
   @Test
   public void test_RuleChecker() {
-    BattleShipBoard<Character> b = new BattleShipBoard<Character>(10, 10);
+    BattleShipBoard<Character> b = new BattleShipBoard<Character>(10, 10, 'X');
     InBoundsRuleChecker<Character> check = new InBoundsRuleChecker<Character>(null);
     NoCollisionRuleChecker<Character> check1 = new NoCollisionRuleChecker<Character>(check);
 

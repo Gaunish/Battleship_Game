@@ -36,12 +36,14 @@ public class RectangleShipTest {
   private void test_coods(RectangleShip<Character> t, int row, int col){
      Coordinate c = new Coordinate(row, col);
      assertEquals(true, t.occupiesCoordinates(c));
-     assertEquals('s', t.getDisplayInfoAt(c));
-     
+     assertEquals('s', t.getDisplayInfoAt(c, true));
+     assertEquals(null, t.getDisplayInfoAt(c, false));
+
      //record hit
      t.recordHitAt(c);
      assertEquals(true, t.wasHitAt(c));
-     assertEquals('*', t.getDisplayInfoAt(c));
+     assertEquals('*', t.getDisplayInfoAt(c, true));
+     assertEquals('s', t.getDisplayInfoAt(c, false));
   }
   
   
