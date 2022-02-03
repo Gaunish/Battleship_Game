@@ -54,12 +54,13 @@ public class TextPlayer {
      
     //3 destroyers
     shipsToPlace.addAll(Collections.nCopies(3, "Destroyer"));
-     
+
+    //3 Battleships
+    shipsToPlace.addAll(Collections.nCopies(3, "Battleship"));
+    
     //2 carriers
     shipsToPlace.addAll(Collections.nCopies(2, "Carrier"));
     
-    //3 Battleships
-    shipsToPlace.addAll(Collections.nCopies(3, "Battleship"));
     
   }
 

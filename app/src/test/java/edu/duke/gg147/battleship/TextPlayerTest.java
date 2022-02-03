@@ -55,22 +55,23 @@ public class TextPlayerTest {
   }
 
 
-  /*
-  private void test_help(String out, String name, String body){
-    String header = "  0|1|2|3|4\n";
-    String out1 = "Player " + name + " where do you want to place a Destroyer?\n";  
-    out += out1 + header + body + header + "\n";
-
-  }
   
-  //Tests method placementPhase,doOnePlacement
+  private String test_help(String name, String body, String ship){
+    String out = "";
+    String header = "  0|1|2|3|4\n";
+    String out1 = "Player " + name + " where do you want to place a " + ship + "?\n";  
+    out += out1 + header + body + header + "\n";
+    return out;
+  }
+
   @Disabled
+  //Tests method placementPhase,doOnePlacement
   @Test
     void test_do_one_placement() throws IOException{
       ByteArrayOutputStream bytes = new ByteArrayOutputStream();
  
       //Init board, app
-      TextPlayer player = createTextPlayer(5, 6, "A0H\nB0V\nB1V\nD0V\nD4V\nA2H\nB2V\nA4V\nB3V\nE1H\n", bytes);
+      TextPlayer player = createTextPlayer(5, 6, "A0H\nB0V\nB1V\nD0V\nD4V\nA4V\nB3V\nE1H\nA2H\nB2V\n", bytes);
 
       String out = "";
       
@@ -80,40 +81,39 @@ public class TextPlayerTest {
       String prompt = "Player A: you are going to place the following ships (which are all rectangular). For each ship, type the coordinate of the upper left side of the ship, followed by either H (for horizontal) or V (for vertical).  For example M4H would place a ship horizontally starting at M4 and going to the right. You have\n2 \"Submarines\" ships that are 1x2\n3 \"Destroyers\" that are 1x3\n3 \"Battleships\" that are 1x4\n2 \"Carriers\" that are 1x6 \n";
 
       out += header + board + header + "\n" + prompt + "\n";
-      
+     
       String body = "A s|s| | |  A\n"+ "B  | | | |  B\n"+ "C  | | | |  C\n"+ "D  | |  D\n"+ "E  | | | |  E\n"+"F  | | | |  F\n";  
-      test_help(out, "A", body);
+      out += test_help("A", body, "Submarine");
 
       String body1 = "A s|s| | |  A\n"+ "B s| | | |  B\n"+ "C s| | | |  C\n"+ "D  | | | |  D\n"+ "E  | | | |  E\n"+"F  | | | |  F\n";  
-      test_help(out, "A", body1);
+      out += test_help("A", body1, "Submarine");
 
       String body2 = "A s|s| | |  A\n"+ "B s|d| | |  B\n"+ "C s|d| | |  C\n"+ "D  |d| | |  D\n"+ "E  | | | |  E\n"+"F  | | | |  F\n";  
-      test_help(out, "A", body2);
+      out+= test_help("A", body2, "Destroyer");
 
       String body3 = "A s|s| | |  A\n"+ "B s|d| | |  B\n"+ "C s|d| | |  C\n"+ "D d|d| | |  D\n"+ "E d| | | |  E\n"+"F d| | | |  F\n";  
-      test_help(out, "A", body3);
+      out += test_help("A", body3, "Destroyer");
 
       String bodyn = "A s|s| | |  A\n"+ "B s|d| | |  B\n"+ "C s|d| | |  C\n"+ "D d|d| | |d D\n"+ "E d| | | |d E\n"+"F d| | | |d F\n";  
-      test_help(out, "A", bodyn);
-
-      String body4 = "A s|s|c|c|  A\n"+ "B s|d| | |  B\n"+ "C s|d| | |  C\n"+ "D d|d| | |d D\n"+ "E d| | | |d E\n"+"F d| | | |d F\n";  
-      test_help(out, "A", body4);
-
-      String body5 = "A s|s|c|c|  A\n"+ "B s|d|c| |  B\n"+ "C s|d|c| |  C\n"+ "D d|d| | |d D\n"+ "E d| | | |d E\n"+"F d| | | |d F\n";  
-      test_help(out, "A", body5);
+      out += test_help("A", bodyn, "Destroyer");
 
       String body6 = "A s|s|c|c|b A\n"+ "B s|d|c| |b B\n"+ "C s|d|c| |b C\n"+ "D d|d| | |d D\n"+ "E d| | | |d E\n"+"F d| | | |d F\n";  
-      test_help(out, "A", body6);
+      out += test_help("A", body6, "Battleship");
 
       String body7 = "A s|s|c|c|b A\n"+ "B s|d|c|b|b B\n"+ "C s|d|c|b|b C\n"+ "D d|d| |b|d D\n"+ "E d| | | |d E\n"+"F d| | | |d F\n";  
-      test_help(out, "A", body7);
+      out += test_help("A", body7, "Battleship");
 
-      body7 = "A s|s|c|c|b A\n"+ "B s|d|c|b|b B\n"+ "C s|d|c|b|b C\n"+ "D d|d| |b|d D\n"+ "E d|b|b|b|d E\n"+"F d| | | |d F\n";  
-      test_help(out, "A", body7);
+      String body8 = "A s|s|c|c|b A\n"+ "B s|d|c|b|b B\n"+ "C s|d|c|b|b C\n"+ "D d|d| |b|d D\n"+ "E d|b|b|b|d E\n"+"F d| | | |d F\n";  
+      out += test_help("A", body8, "Battleship");
+      
+      String body4 = "A s|s|c|c|  A\n"+ "B s|d| | |  B\n"+ "C s|d| | |  C\n"+ "D d|d| | |d D\n"+ "E d| | | |d E\n"+"F d| | | |d F\n";  
+      out += test_help("A", body4, "Carrier");
 
+      String body5 = "A s|s|c|c|  A\n"+ "B s|d|c| |  B\n"+ "C s|d|c| |  C\n"+ "D d|d| | |d D\n"+ "E d| | | |d E\n"+"F d| | | |d F\n";  
+      out += test_help("A", body5, "Carrier");
 
       player.doPlacementPhase();
       assertEquals(out, bytes.toString());
       }
-  */
+  
 }
