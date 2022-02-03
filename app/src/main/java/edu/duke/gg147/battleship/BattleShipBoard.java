@@ -46,6 +46,7 @@ public class BattleShipBoard<T> implements Board<T>{
      @return True if successful
   **/
   public boolean tryAddShip(Ship<T> toAdd){
+    //check if ship placement is valid
     if(placementChecker.checkPlacement(toAdd, this) == false){
       return false;
     }

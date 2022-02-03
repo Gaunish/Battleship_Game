@@ -11,39 +11,35 @@ import java.io.PrintStream;
 import java.io.Reader;
 
 public class App {
-  final Board<Character> theBoard;
-  final BoardTextView view;
-  final BufferedReader inputReader;
-  final PrintStream out;
-  final AbstractShipFactory<Character> shipFactory;
+  //field to rep 2 players
+  final TextPlayer player1, player2;
 
-  public App(Board<Character> theBoard, Reader inputSource, PrintStream out) {
-    this.theBoard = theBoard;
-    this.view = new BoardTextView(theBoard);
-    this.inputReader = new BufferedReader(inputSource);
-    this.out = out;
-    shipFactory = new V1ShipFactory();
+  //constructor to init the class
+  public App(TextPlayer p1, TextPlayer p2) {
+    this.player1 = p1;
+    this.player2 = p2;
   }
 
-  public Placement readPlacement(String prompt) throws IOException {
-    out.println(prompt);
-    String s = inputReader.readLine();
-    return new Placement(s);
-  }
-
-  public void doOnePlacement() throws IOException {
-    Placement p = readPlacement("Where would you like to put your ship?");
-    //RectangleShip<Character> ship = new RectangleShip<Character>(p.getWhere(), 's', '*');
-    Ship<Character> ship  = shipFactory.makeDestroyer(p);
-    theBoard.tryAddShip(ship);
-    BoardTextView view = new BoardTextView(theBoard);
-    out.println(view.displayMyOwnBoard());
-  }
-  
-  
+  //creates the two player and call constructor
+  //shared buffer, printstream
   public static void main(String[] args) throws IOException{
-    Board<Character> b = new BattleShipBoard<Character>(10, 20);
-    App game = new App(b, new InputStreamReader(System.in), System.out);
-    game.doOnePlacement();
+    Board<Character> b1 = new BattleShipBoard<Character>(10, 20);
+    Board<Character> b2 = new BattleShipBoard<Character>(10, 20);
+
+    BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+    V1ShipFactory factory = new V1ShipFactory();
+    
+    TextPlayer p1 = new TextPlayer("A", b1, in, System.out, factory);
+    TextPlayer p2 = new TextPlayer("B", b2, in, System.out, factory);
+
+    
+    App game = new App(p1, p2);
+    game.doPlacementPhase();
+  }
+
+  public void doPlacementPhase() throws IOException{
+    player1.doPlacementPhase();
+    player2.doPlacementPhase();
+  
   }
 }
