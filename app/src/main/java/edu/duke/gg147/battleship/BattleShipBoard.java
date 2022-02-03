@@ -45,13 +45,16 @@ public class BattleShipBoard<T> implements Board<T>{
   /** tries to add ship
      @return True if successful
   **/
-  public boolean tryAddShip(Ship<T> toAdd){
+  public String tryAddShip(Ship<T> toAdd){
     //check if ship placement is valid
-    if(placementChecker.checkPlacement(toAdd, this) == false){
-      return false;
+    //returns output string if invalid
+    String out = placementChecker.checkPlacement(toAdd, this);
+    if(out != null){
+      return out;
     }
+    
     myShips.add(toAdd);
-    return true;
+    return null;
   }
 
   //method to check if ship is present at the coordinate

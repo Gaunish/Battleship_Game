@@ -13,6 +13,27 @@ public class BattleShipBoardTest {
   }
 
   @Test
+  public void test_try_add() {
+    Board<Character> b = new BattleShipBoard<Character>(8, 10);
+    V1ShipFactory factory = new V1ShipFactory();
+    Ship<Character> s = factory.makeSubmarine(new Placement("C5H"));
+
+    //check overlapping
+    assertEquals(null, b.tryAddShip(s));
+    assertEquals("That placement is invalid: the ship overlaps another ship.", b.tryAddShip(s));
+
+    //Check right side
+    Ship<Character> s1 = factory.makeCarrier(new Placement("A8V"));
+    assertEquals("That placement is invalid: the ship goes off the right of the board.", b.tryAddShip(s1));
+
+    //Check invalid placements
+    assertThrows(IllegalArgumentException.class, () -> b.tryAddShip(factory.makeCarrier(new Placement("A0Q"))));
+    assertThrows(IllegalArgumentException.class, () -> b.tryAddShip(factory.makeCarrier(new Placement(""))));
+
+  }
+  
+
+  @Test
   public void  test_invalid_dimensions() {
     assertThrows(IllegalArgumentException.class, () -> new BattleShipBoard<Character>(10, 0));
     assertThrows(IllegalArgumentException.class, () -> new BattleShipBoard<Character>(0, 20));
@@ -31,7 +52,7 @@ public class BattleShipBoardTest {
   }
 
   //private method to check tryAddShip
-  private <T> void checkTryAdd(BattleShipBoard<T> b, Ship<T> toAdd, boolean expected){
+  private <T> void checkTryAdd(BattleShipBoard<T> b, Ship<T> toAdd, String expected){
     assertEquals(expected, b.tryAddShip(toAdd));
   }
 
@@ -52,7 +73,7 @@ public class BattleShipBoardTest {
   }
 
   //private method to check for adding a new ship
-  private <T> void check_ops(BattleShipBoard<T> b, Coordinate c, Ship<T> s, T val, T[][] expected, boolean out){
+  private <T> void check_ops(BattleShipBoard<T> b, Coordinate c, Ship<T> s, T val, T[][] expected, String out){
     checkTryAdd(b, s, out);
     add_expected(expected, c, val);
     checkWhatIsAtBoard(b, expected);
@@ -70,19 +91,19 @@ public class BattleShipBoardTest {
 
     Coordinate c = new Coordinate(21, 5);
     Ship<Character> s = new RectangleShip<Character>(c, 's', '*');
-    check_ops(b, c, s, 's', expected, true);
+    check_ops(b, c, s, 's', expected, null);
 
     Coordinate c1 = new Coordinate(25, 9);
     Ship<Character> s1 = new RectangleShip<Character>(c1, 's', '*');
-    check_ops(b, c1, s1, 's', expected, true);
+    check_ops(b, c1, s1, 's', expected, null);
 
     Coordinate c2 = new Coordinate(0, 0);
     Ship<Character> s2 = new RectangleShip<Character>(c2, 's', '*');
-    check_ops(b, c2, s2, 's', expected, true);
+    check_ops(b, c2, s2, 's', expected, null);
 
     Coordinate c3 = new Coordinate(21, 9);
     Ship<Character> s3 = new RectangleShip<Character>(c3, 's', '*');
-    check_ops(b, c3, s3, 's', expected, true);
+    check_ops(b, c3, s3, 's', expected, null);
 
   }
 }

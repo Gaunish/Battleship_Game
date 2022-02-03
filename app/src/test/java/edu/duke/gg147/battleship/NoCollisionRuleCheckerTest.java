@@ -2,6 +2,7 @@ package edu.duke.gg147.battleship;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class NoCollisionRuleCheckerTest {
@@ -16,13 +17,11 @@ public class NoCollisionRuleCheckerTest {
     Ship<Character> s1 = factory.makeCarrier(new Placement("G9H"));
     Ship<Character> s2 = factory.makeCarrier(new Placement("B5V"));
 
-    assertEquals(true, check.checkMyRule(s, b));
+    assertEquals(null, check.checkMyRule(s, b));
     b.tryAddShip(s);
-    assertEquals(false, check.checkMyRule(s, b));
-    assertEquals(true, check.checkMyRule(s1, b));
-    b.tryAddShip(s1);
-    assertEquals(true, check.checkMyRule(s1, b));
-    assertEquals(false, check.checkMyRule(s2, b));
+    assertEquals("That placement is invalid: the ship overlaps another ship.", check.checkMyRule(s, b));
+    assertEquals(null, check.checkMyRule(s1, b));
+    assertEquals("That placement is invalid: the ship overlaps another ship.", check.checkMyRule(s2, b));
   }
 
   //Combined tests for no collision 
@@ -38,11 +37,11 @@ public class NoCollisionRuleCheckerTest {
     Ship<Character> s2 = factory.makeCarrier(new Placement("B5V"));
     Ship<Character> s3 = factory.makeCarrier(new Placement("C4V")); 
 
-    assertEquals(true, check1.checkPlacement(s, b));
+    assertEquals(null, check1.checkPlacement(s, b));
     b.tryAddShip(s);
-    assertEquals(false, check1.checkPlacement(s, b));
-    assertEquals(false, check1.checkPlacement(s1, b));
-    assertEquals(false, check1.checkPlacement(s2, b));
-    assertEquals(true, check1.checkPlacement(s3, b));
+    assertEquals("That placement is invalid: the ship overlaps another ship.", check1.checkPlacement(s, b));
+    assertEquals("That placement is invalid: the ship goes off the right of the board.", check1.checkPlacement(s1, b));
+    assertEquals("That placement is invalid: the ship overlaps another ship.", check1.checkPlacement(s2, b));
+    assertEquals(null, check1.checkPlacement(s3, b));
   }
 }

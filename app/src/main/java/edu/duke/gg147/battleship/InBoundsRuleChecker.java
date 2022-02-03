@@ -10,18 +10,36 @@ public class InBoundsRuleChecker<T> extends PlacementRuleChecker<T> {
   
   //Implement own rule in dynamic dispatched function
   @Override
-  protected boolean checkMyRule(Ship<T> theShip, Board<T> theBoard) {
+  protected String checkMyRule(Ship<T> theShip, Board<T> theBoard){
     //Get coordinates of ship
     Iterable<Coordinate> coords = theShip.getCoordinates();
 
     for(Coordinate c: coords){
       //check bounds
-      if(c.getRow() < 0 || c.getRow() >= theBoard.getHeight() || c.getColumn() < 0 || c.getColumn() >= theBoard.getWidth()){
-        return false;
+      
+      //Top side
+      if(c.getRow() < 0){
+        return "That placement is invalid: the ship goes off the top of the board.";
       }
+
+      //Bottom side
+      if(c.getRow() >= theBoard.getHeight()){
+        return "That placement is invalid: the ship goes off the bottom of the board.";
+      }
+
+      //Left side
+      if(c.getColumn() < 0){
+        return "That placement is invalid: the ship goes off the left of the board.";
+      }
+
+      //Right side
+      if(c.getColumn() >= theBoard.getWidth()){
+        return "That placement is invalid: the ship goes off the right of the board.";
+      }     
+   
     }
 
-    return true;
+    return null;
   }
 
 }

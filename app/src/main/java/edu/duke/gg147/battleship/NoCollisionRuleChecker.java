@@ -9,18 +9,18 @@ public class NoCollisionRuleChecker <T> extends PlacementRuleChecker<T> {
   
   //Implement own rule in dynamic dispatched function
   @Override
-  protected boolean checkMyRule(Ship<T> theShip, Board<T> theBoard) {
+  protected String checkMyRule(Ship<T> theShip, Board<T> theBoard) throws IllegalArgumentException{
     //Get coordinates of ship
     Iterable<Coordinate> coords = theShip.getCoordinates();
 
     for(Coordinate c: coords){
       //check if any ship occupies coordinate c 
       if(theBoard.whatIsAt(c) != null){
-        return false;
+        return "That placement is invalid: the ship overlaps another ship.";
       }
     }
 
-    return true;
+    return null;
   }
   
 }

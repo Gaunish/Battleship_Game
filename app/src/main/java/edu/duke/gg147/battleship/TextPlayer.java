@@ -72,17 +72,42 @@ public class TextPlayer {
     return new Placement(s);
   }
 
+  //method to retry doOnePlacement
+  private void retryOnePlacement(String shipName, Function<Placement, Ship<Character>> createFn, String output){
+    out.println(output);
+    out.println("Try Again");
+    doOnePlacement(shipName, createFn);
+    return;
+  }
+
   //method to do only placement inputted by user
-  public void doOnePlacement(String shipName, Function<Placement, Ship<Character>> createFn) throws IOException {
+  public void doOnePlacement(String shipName, Function<Placement, Ship<Character>> createFn){
+    //check placement
+    //catch illegal placement and try again
+    try{
     Placement p = readPlacement("Player " + this.name + " where do you want to place a " + shipName + "?");
+    
+
     //RectangleShip<Character> ship = new RectangleShip<Character>(p.getWhere(), 's', '*');
     //Make the required ship
     Ship<Character> ship  = createFn.apply(p);
 
     //add ship to board, view it on out
-    theBoard.tryAddShip(ship);
+    //Check output, if error happened ask user to try again
+    String output = theBoard.tryAddShip(ship);
+    //invalid ship placement
+    if(output != null){
+      retryOnePlacement(shipName, createFn, output);
+      return;
+    }
     BoardTextView view = new BoardTextView(theBoard);
     out.println(view.displayMyOwnBoard());
+    }
+    catch(IllegalArgumentException|IOException e){
+      String error = "That placement is invalid: it does not have the correct format.";
+      retryOnePlacement(shipName, createFn, error);
+      return;
+    }
   }
 
   //Do the placements for user

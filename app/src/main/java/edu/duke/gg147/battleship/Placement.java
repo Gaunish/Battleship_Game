@@ -26,7 +26,7 @@ public class Placement {
   **/
   Placement(String desc){
     if(desc.length() != 3){
-      throw new IllegalArgumentException("Input length is invalid, found length : " + desc.length());
+      throw new IllegalArgumentException("That placement is invalid: it does not have the correct format.");
     }
 
     this.where = new Coordinate(desc.substring(0, 2));
@@ -34,7 +34,7 @@ public class Placement {
     //get the alphabet and check its validity
     char caps = Character.toUpperCase(desc.charAt(2));
     if(caps < 'A' || caps > 'Z'){
-      throw new IllegalArgumentException("alphabet/row value is invalid, found :  " + caps);
+      throw new IllegalArgumentException("That placement is invalid: it does not have the correct format.");
     }
     this.orientation = caps;
   }
