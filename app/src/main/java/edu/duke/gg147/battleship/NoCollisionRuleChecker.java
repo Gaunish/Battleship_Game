@@ -8,6 +8,7 @@ public class NoCollisionRuleChecker <T> extends PlacementRuleChecker<T> {
   }
   
   //Implement own rule in dynamic dispatched function
+  //return error message if any errors, else null
   @Override
   protected String checkMyRule(Ship<T> theShip, Board<T> theBoard) throws IllegalArgumentException{
     //Get coordinates of ship

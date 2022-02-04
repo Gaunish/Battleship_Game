@@ -93,6 +93,7 @@ public class TextPlayer {
       }
       return;
     }
+    //Catch any specific exception
     catch(IllegalArgumentException|IOException e){
       out.println("Invalid Coordinates, try again!");
       doOneHit(enemyBoard);

@@ -35,6 +35,7 @@ public class V1ShipFactory implements AbstractShipFactory<Character> {
       return new RectangleShip<Character>(name, where.getWhere(), w, h, letter, '*');
     }
 
+    //Horizontal orientation
     return new RectangleShip<Character>(name, where.getWhere(), h, w, letter, '*');
   }
 }

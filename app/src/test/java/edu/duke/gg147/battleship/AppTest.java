@@ -24,22 +24,28 @@ class AppTest {
     Board<Character> b1 = new BattleShipBoard<>(2,2,'X');
     Board<Character> b2 = new BattleShipBoard<>(2,2,'X');
     }*/
-  
+
+  //Method to test main in app
+  //gets input.txt and output.txt from dir
   @Test
   @ResourceLock(value = Resources.SYSTEM_OUT, mode = ResourceAccessMode.READ_WRITE)
   void test_main() throws IOException {
     ByteArrayOutputStream bytes = new ByteArrayOutputStream();
     PrintStream out = new PrintStream(bytes, true);
-    
+
+    //find input.txt
     InputStream input = getClass().getClassLoader().getResourceAsStream("input.txt");
     assertNotNull(input);
 
+    //find output.txt
     InputStream expectedStream = getClass().getClassLoader().getResourceAsStream("output.txt");
     assertNotNull(expectedStream);
 
+    //setup in,out to default
     InputStream oldIn = System.in;
     PrintStream oldOut = System.out;
 
+    //try to setup in,out to our own
     try {
       System.setIn(input);
       System.setOut(out);
@@ -49,7 +55,8 @@ class AppTest {
       System.setIn(oldIn);
       System.setOut(oldOut);
     }
- 
+
+    //Compare expected and actual output
     String expected = new String(expectedStream.readAllBytes());
     String actual = bytes.toString();
 

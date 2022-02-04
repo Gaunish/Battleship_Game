@@ -32,11 +32,14 @@ public class RectangleShip<T> extends BasicShip<T>{
     super(makeCoords(upperLeft, width, height), myDisplayInfo, enemyDisplayInfo);
     this.name = name;
   }
+
+  //Helper constructor for abstraction
   public RectangleShip(String name, Coordinate upperLeft, int width, int height, T data, T onHit) {
     this(name, upperLeft, width, height, new SimpleShipDisplayInfo<T>(data, onHit),
         new SimpleShipDisplayInfo<T>(null, data));
   }
- 
+
+  //Helper constructor
   public RectangleShip(Coordinate upperLeft, T data, T onHit) {
     this("testship", upperLeft, 1, 1, data, onHit);
   }

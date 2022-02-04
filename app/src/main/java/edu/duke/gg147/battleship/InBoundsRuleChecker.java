@@ -9,6 +9,7 @@ public class InBoundsRuleChecker<T> extends PlacementRuleChecker<T> {
   }
   
   //Implement own rule in dynamic dispatched function
+  //return error message if any error, else null
   @Override
   protected String checkMyRule(Ship<T> theShip, Board<T> theBoard){
     //Get coordinates of ship
