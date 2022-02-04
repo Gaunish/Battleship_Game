@@ -44,6 +44,7 @@ public class RectangleShip<T> extends BasicShip<T>{
     this("testship", upperLeft, 1, 1, data, onHit);
   }
 
+  @Override
   //getter function for name
   public String getName(){
     return name;

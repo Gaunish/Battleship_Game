@@ -12,7 +12,7 @@ public class InBoundsRuleChecker<T> extends PlacementRuleChecker<T> {
   //return error message if any error, else null
   @Override
   protected String checkMyRule(Ship<T> theShip, Board<T> theBoard){
-    //Get coordinates of ship
+    //Get coordinates of ship    
     Iterable<Coordinate> coords = theShip.getCoordinates();
 
     for(Coordinate c: coords){

@@ -13,6 +13,42 @@ public class BattleShipBoardTest {
   }
 
   @Test
+  public void test_select_ship(){
+    Board<Character> b = new BattleShipBoard<Character>(10, 26, 'X');
+    V1ShipFactory factory = new V1ShipFactory();
+
+    Ship<Character> s = factory.makeCarrier(new Placement("C5U"));
+    b.tryAddShip(s);
+
+    assertSame(s, b.selectShip(new Coordinate("D5")));
+    assertEquals(null, b.selectShip(new Coordinate("D6")));
+
+  }
+
+  @Test
+  public void test_sonar(){
+    Board<Character> b = new BattleShipBoard<Character>(10, 26, 'X');
+    V1ShipFactory factory = new V1ShipFactory();
+    b.tryAddShip(factory.makeCarrier(new Placement("A0U")));
+    b.tryAddShip(factory.makeSubmarine(new Placement("A1H")));
+    b.tryAddShip(factory.makeSubmarine(new Placement("A3H")));
+    b.tryAddShip(factory.makeDestroyer(new Placement("B1H")));
+
+    String out = "Submarines occupy 3 squares\nDestroyers occupy 3 squares\nBattleships occupy 0 squares\nCarriers occupy 6 squares\n";
+    assertEquals(out, b.sonarScan(new Coordinate("C2")));
+
+    Board<Character> b1 = new BattleShipBoard<Character>(10, 26, 'X');
+    b1.tryAddShip(factory.makeBattleship(new Placement("A0D")));
+    b1.tryAddShip(factory.makeSubmarine(new Placement("B2H")));
+    b1.tryAddShip(factory.makeCarrier(new Placement("C0U")));
+    b1.tryAddShip(factory.makeDestroyer(new Placement("C1H")));
+
+    String out2 = "Submarines occupy 1 squares\nDestroyers occupy 1 squares\nBattleships occupy 4 squares\nCarriers occupy 2 squares\n";
+    assertEquals(out2, b1.sonarScan(new Coordinate("A0")));
+  
+  }
+  
+  @Test
   public void test_try_add() {
     Board<Character> b = new BattleShipBoard<Character>(8, 10, 'X');
     V1ShipFactory factory = new V1ShipFactory();
@@ -20,11 +56,16 @@ public class BattleShipBoardTest {
 
     //check overlapping
     assertEquals(null, b.tryAddShip(s));
+    Ship<Character> new_s = factory.makeSubmarine(new Placement("D5H"));
+    assertEquals(null, b.tryMoveShip(s, new_s, new Placement("D5H")));
+    
     assertEquals("That placement is invalid: the ship overlaps another ship.", b.tryAddShip(s));
 
     //Check right side
     Ship<Character> s1 = factory.makeCarrier(new Placement("A8U"));
     assertEquals("That placement is invalid: the ship goes off the right of the board.", b.tryAddShip(s1));
+    assertEquals("That placement is invalid: the ship goes off the right of the board.", b.tryMoveShip(new_s, s1, new Placement("A8U")));
+    
 
     //Check invalid placements
     assertThrows(IllegalArgumentException.class, () -> b.tryAddShip(factory.makeCarrier(new Placement("A0Q"))));

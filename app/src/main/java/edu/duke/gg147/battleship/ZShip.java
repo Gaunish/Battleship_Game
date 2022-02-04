@@ -76,6 +76,7 @@ public class ZShip<T> extends BasicShip<T> {
     this("testship", upperLeft, 'U', data, onHit);
     }*/
 
+  @Override
   //getter function for name
   public String getName(){
     return name;

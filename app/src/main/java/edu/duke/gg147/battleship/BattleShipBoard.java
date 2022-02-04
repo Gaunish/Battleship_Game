@@ -70,6 +70,36 @@ public class BattleShipBoard<T> implements Board<T>{
     return null;
   }
 
+  //Method to select Ship present at coordinate
+  // returns the Ship, if found
+  // else NULL
+  public Ship<T> selectShip(Coordinate where){
+    // Traverse ships
+    for(Ship<T> s : myShips){
+      if(s.occupiesCoordinates(where) == true){
+        //ship found
+        return s;
+      }
+    }
+    return null;
+  }
+
+  
+  //Method to add newship and remove old ship
+  public String tryMoveShip(Ship<T> ship, Ship<T> newShip, Placement p){
+    //Check if ship to be moved to new posn is valid
+    String out = placementChecker.checkPlacement(newShip, this);
+    //error message
+    if(out != null){
+      return out;
+    }
+
+    //Change the ship's location
+    myShips.remove(ship);
+    myShips.add(ship);
+    return null;
+  }
+
   //method to check whether player has lost
   public boolean hasLost(){
     for(Ship<T> s: myShips){
@@ -121,6 +151,94 @@ public class BattleShipBoard<T> implements Board<T>{
     enemyMisses.add(c);
     //no ship at c
     return null;
+  }
+
+  //Method to do sonar scan around coordinate c
+  public String sonarScan(Coordinate where){
+    //No of coords occupied by each shi[
+    int s = 0;
+    int c = 0;
+    int d = 0;
+    int b = 0;
+
+    //int to keep track of coords
+    int start = 0;
+    int row_len = 1;
+    int row = where.getRow();
+    int column = where.getColumn();
+
+    //track upper half
+    for(int i = -3; i <= 0; i++){
+      for(int j = 0; j < row_len; j++){
+        int row_c = row + i;
+        int col = column + start + j;
+        
+        if(row_c < 0 || row_c >= height || col < 0 || col >= width){
+          continue;
+        }
+        Coordinate check = new Coordinate(row_c, col);
+        for(Ship<T> ship : myShips){
+           if (ship.occupiesCoordinates(check)){
+             if(ship.getName() == "Submarine"){
+               s += 1;
+             }
+             else if(ship.getName() == "Carrier"){
+               c += 1;
+             }
+             if(ship.getName() == "Destroyer"){
+               d += 1;
+             }
+             else if(ship.getName() == "Battleship"){
+               b += 1;
+             }
+           }
+        }
+      }
+      start -= 1;
+      row_len += 2;
+    }
+
+    //track lower half
+    row_len = 5;
+    start = -2;
+    for(int i = 1; i < 4; i++){
+      for(int j = 0; j < row_len; j++){
+        int row_c = row + i;
+        int col = column + start + j;
+        
+        if(row_c < 0 || row_c >= height || col < 0 || col >= width){
+          continue;
+        }
+       
+        Coordinate check = new Coordinate(row_c, col);
+        for(Ship<T> ship : myShips){
+           if (ship.occupiesCoordinates(check)){
+             if(ship.getName() == "Submarine"){
+               s += 1;
+             }
+             else if(ship.getName() == "Carrier"){
+               c += 1;
+             }
+             if(ship.getName() == "Destroyer"){
+               d += 1;
+             }
+             else if(ship.getName() == "Battleship"){
+               b += 1;
+             }
+           }
+        }
+      }
+      start += 1;
+      row_len -= 2;
+    }
+
+    String out = "";
+    out += "Submarines occupy " + String.valueOf(s) + " squares\n";
+    out += "Destroyers occupy " + String.valueOf(d) + " squares\n";
+    out += "Battleships occupy " + String.valueOf(b) + " squares\n";
+    out += "Carriers occupy " +  String.valueOf(c) + " squares\n";
+    
+    return out;
   }
   
 }

@@ -41,4 +41,7 @@ public interface Board<T> {
    * @return True if player has lost, else false
    **/
   public boolean hasLost();
+  public Ship<T> selectShip(Coordinate where);
+  public String tryMoveShip(Ship<T> ship, Ship<T> newShip, Placement p);
+  public String sonarScan(Coordinate where);
 }

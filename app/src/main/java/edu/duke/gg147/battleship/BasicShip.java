@@ -1,5 +1,6 @@
 package edu.duke.gg147.battleship;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /** this is a a Placeholder class that just occupies one square
@@ -86,5 +87,8 @@ public abstract class BasicShip<T> implements Ship<T>{
   public Iterable<Coordinate> getCoordinates(){
     return myPieces.keySet();
   }
+
+  //get Coordinates where ship was hit
+  
 
 }
