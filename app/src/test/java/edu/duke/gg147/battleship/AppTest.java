@@ -18,7 +18,13 @@ import org.junit.jupiter.api.parallel.ResourceLock;
 import org.junit.jupiter.api.parallel.Resources;
 
 class AppTest {
-     
+
+  /*@Test
+  void test_attacking_phase(){
+    Board<Character> b1 = new BattleShipBoard<>(2,2,'X');
+    Board<Character> b2 = new BattleShipBoard<>(2,2,'X');
+    }*/
+  
   @Test
   @ResourceLock(value = Resources.SYSTEM_OUT, mode = ResourceAccessMode.READ_WRITE)
   void test_main() throws IOException {

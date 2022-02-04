@@ -35,6 +35,8 @@ public class App {
     
     App game = new App(p1, p2);
     game.doPlacementPhase();
+    game.doAttackingPhase(b1, b2);
+    return;
   }
 
   public void doPlacementPhase() throws IOException{
@@ -42,4 +44,29 @@ public class App {
     player2.doPlacementPhase();
   
   }
+
+  //Lets player play game
+  public void doAttackingPhase(Board<Character> b1, Board<Character> b2) throws IOException{
+    while(b1.hasLost() == false && b2.hasLost() == false){
+      //Player A turn
+      player1.playOneTurn(b2, new BoardTextView(b2), "Player B's ocean");
+
+      //Player A won
+      if(b2.hasLost() == true){
+        System.out.println("Player A won!");
+        return;
+      }
+
+      //Player B turn
+      player2.playOneTurn(b1, new BoardTextView(b1), "Player A's ocean");
+
+      //Player B won
+      if(b1.hasLost() == true){
+        System.out.println("Player B won!");
+        return;
+      }
+    
+    }
+  }
+
 }

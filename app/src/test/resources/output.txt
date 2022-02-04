@@ -52,18 +52,6 @@ T  | | | | | | | | |  T
   0|1|2|3|4|5|6|7|8|9
 
 Player A where do you want to place a Submarine?
-That placement is invalid: the ship overlaps another ship.
-Try Again
-Player A where do you want to place a Submarine?
-That placement is invalid: it does not have the correct format.
-Try Again
-Player A where do you want to place a Submarine?
-That placement is invalid: the ship goes off the right of the board.
-Try Again
-Player A where do you want to place a Submarine?
-That placement is invalid: it does not have the correct format.
-Try Again
-Player A where do you want to place a Submarine?
   0|1|2|3|4|5|6|7|8|9
 A s|s| | | | | | | |  A
 B s|s| | | | | | | |  B
@@ -111,12 +99,6 @@ S  | | | | | | | | |  S
 T  | | | | | | | | |  T
   0|1|2|3|4|5|6|7|8|9
 
-Player A where do you want to place a Destroyer?
-That placement is invalid: the ship overlaps another ship.
-Try Again
-Player A where do you want to place a Destroyer?
-That placement is invalid: the ship overlaps another ship.
-Try Again
 Player A where do you want to place a Destroyer?
   0|1|2|3|4|5|6|7|8|9
 A s|s|d|d| | | | | |  A
@@ -215,36 +197,12 @@ T  | | | | | | | | |  T
 
 Player A where do you want to place a Battleship?
   0|1|2|3|4|5|6|7|8|9
-A s|s|d|d|d|b|b| | |b A
-B s|s|d|d|d|b|b| | |b B
-C  | |d|d|d|b|b| | |b C
-D  | | | | |b|b| | |b D
+A s|s|d|d|d|b|b|b| |  A
+B s|s|d|d|d|b|b|b| |  B
+C  | |d|d|d|b|b|b| |  C
+D  | | | | |b|b|b| |  D
 E  | | | | | | | | |  E
 F  | | | | | | | | |  F
-G  | | | | | | | | |  G
-H  | | | | | | | | |  H
-I  | | | | | | | | |  I
-J  | | | | | | | | |  J
-K  | | | | | | | | |  K
-L  | | | | | | | | |  L
-M  | | | | | | | | |  M
-N  | | | | | | | | |  N
-O  | | | | | | | | |  O
-P  | | | | | | | | |  P
-Q  | | | | | | | | |  Q
-R  | | | | | | | | |  R
-S  | | | | | | | | |  S
-T  | | | | | | | | |  T
-  0|1|2|3|4|5|6|7|8|9
-
-Player A where do you want to place a Carrier?
-  0|1|2|3|4|5|6|7|8|9
-A s|s|d|d|d|b|b|c| |b A
-B s|s|d|d|d|b|b|c| |b B
-C  | |d|d|d|b|b|c| |b C
-D  | | | | |b|b|c| |b D
-E  | | | | | | |c| |  E
-F  | | | | | | |c| |  F
 G  | | | | | | | | |  G
 H  | | | | | | | | |  H
 I  | | | | | | | | |  I
@@ -266,12 +224,36 @@ That placement is invalid: it does not have the correct format.
 Try Again
 Player A where do you want to place a Carrier?
   0|1|2|3|4|5|6|7|8|9
-A s|s|d|d|d|b|b|c|c|b A
-B s|s|d|d|d|b|b|c|c|b B
-C  | |d|d|d|b|b|c|c|b C
-D  | | | | |b|b|c|c|b D
-E  | | | | | | |c|c|  E
-F  | | | | | | |c|c|  F
+A s|s|d|d|d|b|b|b|c|  A
+B s|s|d|d|d|b|b|b|c|  B
+C  | |d|d|d|b|b|b|c|  C
+D  | | | | |b|b|b|c|  D
+E  | | | | | | | |c|  E
+F  | | | | | | | |c|  F
+G  | | | | | | | | |  G
+H  | | | | | | | | |  H
+I  | | | | | | | | |  I
+J  | | | | | | | | |  J
+K  | | | | | | | | |  K
+L  | | | | | | | | |  L
+M  | | | | | | | | |  M
+N  | | | | | | | | |  N
+O  | | | | | | | | |  O
+P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R
+S  | | | | | | | | |  S
+T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to place a Carrier?
+  0|1|2|3|4|5|6|7|8|9
+A s|s|d|d|d|b|b|b|c|c A
+B s|s|d|d|d|b|b|b|c|c B
+C  | |d|d|d|b|b|b|c|c C
+D  | | | | |b|b|b|c|c D
+E  | | | | | | | |c|c E
+F  | | | | | | | |c|c F
 G  | | | | | | | | |  G
 H  | | | | | | | | |  H
 I  | | | | | | | | |  I
@@ -318,13 +300,10 @@ Player B: you are going to place the following ships (which are all rectangular)
 2 "Carriers" that are 1x6 
 
 Player B where do you want to place a Submarine?
-That placement is invalid: it does not have the correct format.
-Try Again
-Player B where do you want to place a Submarine?
   0|1|2|3|4|5|6|7|8|9
 A  | | | | | | | | |  A
-B s|s| | | | | | | |  B
-C  | | | | | | | | |  C
+B s| | | | | | | | |  B
+C s| | | | | | | | |  C
 D  | | | | | | | | |  D
 E  | | | | | | | | |  E
 F  | | | | | | | | |  F
@@ -346,9 +325,9 @@ T  | | | | | | | | |  T
 
 Player B where do you want to place a Submarine?
   0|1|2|3|4|5|6|7|8|9
-A  | | | | | | | | |  A
+A  |s| | | | | | | |  A
 B s|s| | | | | | | |  B
-C s|s| | | | | | | |  C
+C s| | | | | | | | |  C
 D  | | | | | | | | |  D
 E  | | | | | | | | |  E
 F  | | | | | | | | |  F
@@ -369,14 +348,11 @@ T  | | | | | | | | |  T
   0|1|2|3|4|5|6|7|8|9
 
 Player B where do you want to place a Destroyer?
-That placement is invalid: it does not have the correct format.
-Try Again
-Player B where do you want to place a Destroyer?
   0|1|2|3|4|5|6|7|8|9
-A  | | | | | | | | |  A
-B s|s| | | | | | | |  B
-C s|s| | | | | | | |  C
-D d|d|d| | | | | | |  D
+A  |s|d| | | | | | |  A
+B s|s|d| | | | | | |  B
+C s| |d| | | | | | |  C
+D  | | | | | | | | |  D
 E  | | | | | | | | |  E
 F  | | | | | | | | |  F
 G  | | | | | | | | |  G
@@ -397,11 +373,11 @@ T  | | | | | | | | |  T
 
 Player B where do you want to place a Destroyer?
   0|1|2|3|4|5|6|7|8|9
-A  | | | | | | | | |  A
-B s|s| | | | | | | |  B
-C s|s| | | | | | | |  C
-D d|d|d| | | | | | |  D
-E d|d|d| | | | | | |  E
+A  |s|d|d| | | | | |  A
+B s|s|d|d| | | | | |  B
+C s| |d|d| | | | | |  C
+D  | | | | | | | | |  D
+E  | | | | | | | | |  E
 F  | | | | | | | | |  F
 G  | | | | | | | | |  G
 H  | | | | | | | | |  H
@@ -421,12 +397,12 @@ T  | | | | | | | | |  T
 
 Player B where do you want to place a Destroyer?
   0|1|2|3|4|5|6|7|8|9
-A  | | | | | | | | |  A
-B s|s| | | | | | | |  B
-C s|s| | | | | | | |  C
-D d|d|d| | | | | | |  D
-E d|d|d| | | | | | |  E
-F d|d|d| | | | | | |  F
+A  |s|d|d|d| | | | |  A
+B s|s|d|d|d| | | | |  B
+C s| |d|d|d| | | | |  C
+D  | | | | | | | | |  D
+E  | | | | | | | | |  E
+F  | | | | | | | | |  F
 G  | | | | | | | | |  G
 H  | | | | | | | | |  H
 I  | | | | | | | | |  I
@@ -445,43 +421,13 @@ T  | | | | | | | | |  T
 
 Player B where do you want to place a Battleship?
   0|1|2|3|4|5|6|7|8|9
-A  | | | | | | | | |  A
-B s|s| | | | | | | |  B
-C s|s| | | | | | | |  C
-D d|d|d| | | | | | |  D
-E d|d|d| | | | | | |  E
-F d|d|d| | | | | | |  F
-G b|b|b|b| | | | | |  G
-H  | | | | | | | | |  H
-I  | | | | | | | | |  I
-J  | | | | | | | | |  J
-K  | | | | | | | | |  K
-L  | | | | | | | | |  L
-M  | | | | | | | | |  M
-N  | | | | | | | | |  N
-O  | | | | | | | | |  O
-P  | | | | | | | | |  P
-Q  | | | | | | | | |  Q
-R  | | | | | | | | |  R
-S  | | | | | | | | |  S
-T  | | | | | | | | |  T
-  0|1|2|3|4|5|6|7|8|9
-
-Player B where do you want to place a Battleship?
-That placement is invalid: the ship overlaps another ship.
-Try Again
-Player B where do you want to place a Battleship?
-That placement is invalid: it does not have the correct format.
-Try Again
-Player B where do you want to place a Battleship?
-  0|1|2|3|4|5|6|7|8|9
-A  | | | | | | | | |b A
-B s|s| | | | | | | |b B
-C s|s| | | | | | | |b C
-D d|d|d| | | | | | |b D
-E d|d|d| | | | | | |  E
-F d|d|d| | | | | | |  F
-G b|b|b|b| | | | | |  G
+A  |s|d|d|d|b| | | |  A
+B s|s|d|d|d|b| | | |  B
+C s| |d|d|d|b| | | |  C
+D  | | | | |b| | | |  D
+E  | | | | | | | | |  E
+F  | | | | | | | | |  F
+G  | | | | | | | | |  G
 H  | | | | | | | | |  H
 I  | | | | | | | | |  I
 J  | | | | | | | | |  J
@@ -499,13 +445,37 @@ T  | | | | | | | | |  T
 
 Player B where do you want to place a Battleship?
   0|1|2|3|4|5|6|7|8|9
-A  | | | | | | | |b|b A
-B s|s| | | | | | |b|b B
-C s|s| | | | | | |b|b C
-D d|d|d| | | | | |b|b D
-E d|d|d| | | | | | |  E
-F d|d|d| | | | | | |  F
-G b|b|b|b| | | | | |  G
+A  |s|d|d|d|b|b| | |  A
+B s|s|d|d|d|b|b| | |  B
+C s| |d|d|d|b|b| | |  C
+D  | | | | |b|b| | |  D
+E  | | | | | | | | |  E
+F  | | | | | | | | |  F
+G  | | | | | | | | |  G
+H  | | | | | | | | |  H
+I  | | | | | | | | |  I
+J  | | | | | | | | |  J
+K  | | | | | | | | |  K
+L  | | | | | | | | |  L
+M  | | | | | | | | |  M
+N  | | | | | | | | |  N
+O  | | | | | | | | |  O
+P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R
+S  | | | | | | | | |  S
+T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to place a Battleship?
+  0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b| |  A
+B s|s|d|d|d|b|b|b| |  B
+C s| |d|d|d|b|b|b| |  C
+D  | | | | |b|b|b| |  D
+E  | | | | | | | | |  E
+F  | | | | | | | | |  F
+G  | | | | | | | | |  G
 H  | | | | | | | | |  H
 I  | | | | | | | | |  I
 J  | | | | | | | | |  J
@@ -523,13 +493,13 @@ T  | | | | | | | | |  T
 
 Player B where do you want to place a Carrier?
   0|1|2|3|4|5|6|7|8|9
-A  | | | | | | |c|b|b A
-B s|s| | | | | |c|b|b B
-C s|s| | | | | |c|b|b C
-D d|d|d| | | | |c|b|b D
-E d|d|d| | | | |c| |  E
-F d|d|d| | | | |c| |  F
-G b|b|b|b| | | | | |  G
+A  |s|d|d|d|b|b|b|c|  A
+B s|s|d|d|d|b|b|b|c|  B
+C s| |d|d|d|b|b|b|c|  C
+D  | | | | |b|b|b|c|  D
+E  | | | | | | | |c|  E
+F  | | | | | | | |c|  F
+G  | | | | | | | | |  G
 H  | | | | | | | | |  H
 I  | | | | | | | | |  I
 J  | | | | | | | | |  J
@@ -547,13 +517,13 @@ T  | | | | | | | | |  T
 
 Player B where do you want to place a Carrier?
   0|1|2|3|4|5|6|7|8|9
-A  | | | | | |c|c|b|b A
-B s|s| | | | |c|c|b|b B
-C s|s| | | | |c|c|b|b C
-D d|d|d| | | |c|c|b|b D
-E d|d|d| | | |c|c| |  E
-F d|d|d| | | |c|c| |  F
-G b|b|b|b| | | | | |  G
+A  |s|d|d|d|b|b|b|c|c A
+B s|s|d|d|d|b|b|b|c|c B
+C s| |d|d|d|b|b|b|c|c C
+D  | | | | |b|b|b|c|c D
+E  | | | | | | | |c|c E
+F  | | | | | | | |c|c F
+G  | | | | | | | | |  G
 H  | | | | | | | | |  H
 I  | | | | | | | | |  I
 J  | | | | | | | | |  J
@@ -569,3 +539,2282 @@ S  | | | | | | | | |  S
 T  | | | | | | | | |  T
   0|1|2|3|4|5|6|7|8|9
 
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A s|s|d|d|d|b|b|b|c|c A                A  | | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+Invalid Coordinates, try again!
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A  | | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Submarine!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|s|d|d|d|b|b|b|c|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You missed!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|s|d|d|d|b|b|b|c|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Submarine!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s| | | | | | | | |  A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Submarine!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|d|d|d|b|b|b|c|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s| | | | | | | |  A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|d|d|b|b|b|c|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d| | | | | | |  A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|d|b|b|b|c|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | | | | | | | |X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d| | | | | |  A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|b|b|b|c|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | | | | | | |X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d| | | | |  A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|b|b|c|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | | | | | |X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b| | | |  A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|b|c|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | | | | |X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b| | |  A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|c|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | | |X| |X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b| |  A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|c A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | | |X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|  A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B s|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X| | |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You missed!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|s|d|d|d|b|b|b|c|c B                B  | | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Submarine!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Submarine!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|s|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Submarine!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|d|d|d|b|b|b|c|c B                B s| | | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Submarine!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|d|d|b|b|b|c|c B                B s|s| | | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|d|d|b|b|b|c|c B                B s|s| | | | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Destroyer!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|d|b|b|b|c|c B                B s|s|d| | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|d|d|b|b|b|c|c B                B s|s| |d| | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Destroyer!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|d|b|b|b|c|c B                B s|s|d| | | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|d|b|b|b|c|c B                B s|s| |d| | | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Destroyer!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|b|b|b|c|c B                B s|s|d|d| | | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|b|b|b|c|c B                B s|s| |d|d| | | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Battleship!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|b|b|c|c B                B s|s|d|d|d| | | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|b|b|c|c B                B s|s| |d|d|b| | | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Battleship!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|b|c|c B                B s|s|d|d|d|b| | | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|b|c|c B                B s|s| |d|d|b|b| | |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Battleship!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|c|c B                B s|s|d|d|d|b|b| | |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|c|c B                B s|s| |d|d|b|b|b| |  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|c B                B s|s|d|d|d|b|b|b| |  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|c B                B s|s| |d|d|b|b|b|c|  B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+Invalid Coordinates, try again!
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|  B
+C s| |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |d|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Destroyer!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|d|d|b|b|b|c|c C                C  | | | | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|d|d|b|b|b|c|c C                C  | |d| | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Destroyer!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|d|b|b|b|c|c C                C  | |d| | | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|d|b|b|b|c|c C                C  | |d|d| | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Destroyer!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|b|b|b|c|c C                C  | |d|d| | | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|d|*|b|b|c|c C                C  | |d|d|d| | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Destroyer!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|b|b|b|c|c C                C  | |d|d| |b| | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Destroyer!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|b|b|c|c C                C  | |d|d|d| | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Destroyer!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|b|b|b|c|c C                C  | |d|d|d|b| | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|b|b|c|c C                C  | |d|d|d| | | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Battleship!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|b|b|c|c C                C  | |d|d|d|b| | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|b|c|c C                C  | |d|d|d|b| | | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Battleship!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|b|c|c C                C  | |d|d|d|b|b| | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+Invalid Coordinates, try again!
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|b|c|c C                C  | |d|d|d|b|b| | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Battleship!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|c|c C                C  | |d|d|d|b|b| | |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|c|c C                C  | |d|d|d|b|b|b| |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|c C                C  | |d|d|d|b|b|b| |  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|c C                C  | |d|d|d|b|b|b|c|  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|  C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |b|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Battleship!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|b|b|c|c D                D  | | | | | | | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|b|b|c|c D                D  | | | | |b| | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Battleship!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|b|c|c D                D  | | | | |b| | | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|b|c|c D                D  | | | | |b|b| | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Battleship!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|c|c D                D  | | | | |b|b| | |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Battleship!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|c|c D                D  | | | | |b|b|b| |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|c D                D  | | | | |b|b|b| |  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|c D                D  | | | | |b|b|b|c|  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|  D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |c|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+Invalid Coordinates, try again!
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |*|c E                E  | | | | | | | | |  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |c|* E                E  | | | | | | | |c|  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |*|c E                E  | | | | | | | | |c E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |*|* E                E  | | | | | | | |c|  E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |*|* E                E  | | | | | | | |c|c E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+Invalid Coordinates, try again!
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |*|* E                E  | | | | | | | |c|c E
+F  | | | | | | | |c|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |*|* E                E  | | | | | | | |c|c E
+F  | | | | | | | |*|c F                F  | | | | | | | | |  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player A's turn:
+     Your ocean                                Player B's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A *|*|*|*|*|*|*|*|*|* A                A X| | | | | | | | |  A
+B *|*|*|*|*|*|*|*|*|* B                B s|s| |d|d|b|b|b|c|c B
+C  | |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |*|* E                E  | | | | | | | |c|c E
+F  | | | | | | | |*|c F                F  | | | | | | | |c|  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P  | | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S X| | | | | | | | |  S
+T  | | | | | | | | |  T                T X|X| |X|X|X|X|X|X|X T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player A where do you want to hit on board?
+You hit a Carrier!
+Player B's turn:
+     Your ocean                                Player A's ocean
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+A  |s|d|d|d|b|b|b|c|c A                A s|s|d|d|d|b|b|b|c|c A
+B *|*|d|*|*|*|*|*|*|* B                B s|s|d|d|d|b|b|b|c|c B
+C s| |*|*|*|*|*|*|*|* C                C  | |d|d|d|b|b|b|c|c C
+D  | | | | |*|*|*|*|* D                D  | | | | |b|b|b|c|c D
+E  | | | | | | | |*|* E                E  | | | | | | | |c|c E
+F  | | | | | | | |*|* F                F  | | | | | | | |c|  F
+G  | | | | | | | | |  G                G  | | | | | | | | |  G
+H  | | | | | | | | |  H                H  | | | | | | | | |  H
+I  | | | | | | | | |  I                I  | | | | | | | | |  I
+J  | | | | | | | | |  J                J  | | | | | | | | |  J
+K  | | | | | | | | |  K                K  | | | | | | | | |  K
+L  | | | | | | | | |  L                L  | | | | | | | | |  L
+M  | | | | | | | | |  M                M  | | | | | | | | |  M
+N  | | | | | | | | |  N                N  | | | | | | | | |  N
+O  | | | | | | | | |  O                O  | | | | | | | | |  O
+P  | | | | | | | | |  P                P X| | | | | | | | |  P
+Q  | | | | | | | | |  Q                Q  | | | | | | | | |  Q
+R  | | | | | | | | |  R                R  | | | | | | | | |  R
+S  | | | | | | | | |  S                S  | | | | | | | | |  S
+T  | | | | | | | | |  T                T  | | | | | | | | |  T
+  0|1|2|3|4|5|6|7|8|9                    0|1|2|3|4|5|6|7|8|9
+
+Player B where do you want to hit on board?
+You hit a Carrier!
+Player B won!

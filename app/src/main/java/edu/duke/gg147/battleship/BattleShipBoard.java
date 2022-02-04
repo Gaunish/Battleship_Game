@@ -70,11 +70,21 @@ public class BattleShipBoard<T> implements Board<T>{
     return null;
   }
 
+  //method to check whether player has lost
+  public boolean hasLost(){
+    for(Ship<T> s: myShips){
+      if(s.isSunk() == false){
+        return false;
+      }
+    }
+    return true;
+  }
+
   //method to check what is present for self
   public T whatIsAtForSelf(Coordinate where) {
     return whatIsAt(where, true);
   }
-
+  
   //method to check if ship is present at the coordinate
   //if present, returns apt display info
   protected T whatIsAt(Coordinate where, boolean isSelf){

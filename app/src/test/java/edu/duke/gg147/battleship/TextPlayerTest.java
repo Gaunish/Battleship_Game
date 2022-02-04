@@ -13,7 +13,8 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class TextPlayerTest {
-  
+
+  //Method to test readPlacement
    @Test
    void test_read_placement() throws IOException{
       //input stream to read programmed input (user feint) 
@@ -45,6 +46,91 @@ public class TextPlayerTest {
         }
     }
 
+  //Method to test doOneHit
+  @Test
+  void test_do_one_hit(){
+    //Init board, app
+    Board<Character> b = new BattleShipBoard<Character>(4, 4, 'X');
+    V1ShipFactory f = new V1ShipFactory();
+    Ship<Character> s = f.makeSubmarine(new Placement("A0V"));
+    b.tryAddShip(s);
+    
+
+    //input stream to read programmed input (user feint) 
+    //StringReader sr = new StringReader("F5\nB0\n");
+
+    //output stream to put output in bytes (ps)
+    ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+
+    TextPlayer player = createTextPlayer(4, 4, "F5\nB0\nA1\n", bytes);
+
+    /*String out = "";
+    out += "Player A where do you want to hit on board?\n";
+    out += "You hit a Submarine!\n";
+    
+    player.doOneHit(b);
+    assertEquals(out, bytes.toString());
+    bytes.reset();
+    
+
+    out = "";
+    out += "Player A where do you want to hit on board?\n";
+    out += "You missed!\n";
+    player.doOneHit(b);
+    assertEquals(out, bytes.toString());
+    bytes.reset();*/
+    
+    String out = "";
+    out += "Player A where do you want to hit on board?\n";
+    out += "Invalid Coordinates, try again!\n";
+    out += "Player A where do you want to hit on board?\n";
+    out += "You hit a Submarine!\n";
+    out += "Player A where do you want to hit on board?\n";
+    out += "You missed!\n";
+   
+   
+    player.doOneHit(b);
+    player.doOneHit(b);
+    assertEquals(out, bytes.toString());
+    bytes.reset();
+  }
+    
+  
+  //Method to test readCoordinate
+  @Test
+   void test_read_coords() throws IOException{
+      //input stream to read programmed input (user feint) 
+      //StringReader sr = new StringReader("D4\nE5\nF6\n");
+
+      //output stream to put output in bytes (ps)
+      ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+ 
+      //Init board, app
+      Board<Character> b = new BattleShipBoard<Character>(10, 20, 'X');
+   
+      TextPlayer player = createTextPlayer(10, 20, "D4\nE5\nF6\n", bytes);
+
+
+
+      //Prompt, expected output
+      String prompt = "Player A where do you want to hit on board?";
+      Coordinate[] expected = new Coordinate[3];
+      expected[0] = new Coordinate(3, 4);
+      expected[1] = new Coordinate(4, 5);
+      expected[2] = new Coordinate(5, 6);
+
+      //check expected output
+      for (int i = 0; i < expected.length; i++) {
+        Coordinate p = player.readCoordinate(prompt, b);
+        assertEquals(p, expected[i]); //did we get the right Placement back
+        assertEquals(prompt + "\n", bytes.toString()); //should have printed prompt and newline
+        bytes.reset(); //clear out bytes for next time around
+        }
+    }
+
+
+  
+
   //helper function to create a text player
   private TextPlayer createTextPlayer(int w, int h, String inputData, OutputStream bytes) {
     BufferedReader input = new BufferedReader(new StringReader(inputData));
@@ -55,7 +141,7 @@ public class TextPlayerTest {
   }
 
 
-  
+  /*
   private String test_help(String name, String body, String ship){
     String out = "";
     String header = "  0|1|2|3|4\n";
@@ -64,14 +150,19 @@ public class TextPlayerTest {
     return out;
   }
 
-  @Disabled
+  
   //Tests method placementPhase,doOnePlacement
   @Test
     void test_do_one_placement() throws IOException{
-      ByteArrayOutputStream bytes = new ByteArrayOutputStream();
- 
+    /* ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+
+      String in = "A0V\n";
+      //B0V\nD0V\n";
+      //nB1V\nD4V\nA4V\nA5V\nD5V\nA2V\nA3V\
+      
       //Init board, app
-      TextPlayer player = createTextPlayer(5, 6, "A0H\nB0V\nB1V\nD0V\nD4V\nA4V\nB3V\nE1H\nA2H\nB2V\n", bytes);
+      TextPlayer player = createTextPlayer(6, 6, "A0V\n", bytes);
+      player.doPlacementPhase();
 
       String out = "";
       
@@ -112,8 +203,19 @@ public class TextPlayerTest {
       String body5 = "A s|s|c|c|  A\n"+ "B s|d|c| |  B\n"+ "C s|d|c| |  C\n"+ "D d|d| | |d D\n"+ "E d| | | |d E\n"+"F d| | | |d F\n";  
       out += test_help("A", body5, "Carrier");
 
+      ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+
+      String in = "A0V\nB0V\nD0V\nB1V\nd4v\na4v\na5v\nd5v\na2v\na3v\n";
+      //B0V\nD0V\n";
+      //nB1V\nD4V\nA4V\nA5V\nD5V\nA2V\nA3V\
+      
+      //Init board, app
+      TextPlayer player = createTextPlayer(9, 9, "A0V\nB0V\nD0V\nB1V\nd4v\na4v\na5v\nd5v\na2v\na3v\n", bytes);
       player.doPlacementPhase();
+
+      //player.doPlacementPhase();
       assertEquals(out, bytes.toString());
+      bytes.reset();
       }
-  
+  */
 }

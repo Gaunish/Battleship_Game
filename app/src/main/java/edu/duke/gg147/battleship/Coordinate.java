@@ -21,13 +21,13 @@ public class Coordinate {
    **/
   Coordinate(String desc){
     if(desc.length() != 2){
-      throw new IllegalArgumentException("That placement is invalid: it does not have the correct format.");
+      throw new IllegalArgumentException("That Coordinate is invalid: it does not have the correct format.");
     }
     
     //get the alphabet and check its validity
     char caps = Character.toUpperCase(desc.charAt(0));
     if(caps < 'A' || caps > 'Z'){
-      throw new IllegalArgumentException("That placement is invalid: it does not have the correct format.");
+      throw new IllegalArgumentException("That Coordinate is invalid: it does not have the correct format.");
     }
 
     this.row = caps - 'A';

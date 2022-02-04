@@ -111,6 +111,7 @@ public class BattleShipBoardTest {
     b.fireAt(c1);
     assertEquals('*', b.whatIsAtForSelf(c1));
     assertEquals('s', b.whatIsAtForEnemy(c1));
+    assertEquals(false, b.hasLost());
 
     //Miss
     Coordinate c5 = new Coordinate(22, 9);
@@ -121,6 +122,15 @@ public class BattleShipBoardTest {
     //Not hit
     assertEquals('s', b.whatIsAtForSelf(c3));
     assertEquals(null, b.whatIsAtForEnemy(c3));
+
+    b.fireAt(c);
+    assertEquals(false, b.hasLost());
+
+    b.fireAt(c2);
+    assertEquals(false, b.hasLost());
+
+    b.fireAt(c3);
+    assertEquals(true, b.hasLost());
   }
 
   //Method to test fireAt

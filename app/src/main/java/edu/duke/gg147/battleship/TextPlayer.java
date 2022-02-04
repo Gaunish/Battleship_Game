@@ -64,6 +64,56 @@ public class TextPlayer {
     
   }
 
+  //Method to play one turn for user
+  public void playOneTurn(Board<Character> enemyBoard, BoardTextView enemyView, String enemyName){
+    out.println("Player " + name + "'s turn:");
+
+    //display boards
+    out.println(view.displayMyBoardWithEnemyNextToIt(enemyView, "Your ocean", enemyName));
+
+    doOneHit(enemyBoard);
+  }
+
+  //Method to take coordinate from user and do a hit
+  public void doOneHit(Board<Character> enemyBoard){
+    //Prompt for Coordinate
+    try{
+      //get the coords
+      Coordinate c = readCoordinate("Player " + this.name + " where do you want to hit on board?", enemyBoard);
+
+      //Place hit
+      Ship<Character> s = enemyBoard.fireAt(c);
+
+      //print the result
+      if(s == null){
+        out.println("You missed!");
+      }
+      else{
+        out.println("You hit a " + s.getName() +"!");
+      }
+      return;
+    }
+    catch(IllegalArgumentException|IOException e){
+      out.println("Invalid Coordinates, try again!");
+      doOneHit(enemyBoard);
+      return;
+    }
+  }
+    
+
+  //method to take user input for Coordinate, prints prompt before
+  public Coordinate readCoordinate(String prompt, Board<Character> enemyBoard) throws IOException {
+    out.println(prompt);
+    String s = inputReader.readLine();
+    Coordinate c = new Coordinate(s);
+
+    if(c.getRow() < 0 || c.getRow() >= enemyBoard.getHeight() || c.getColumn() < 0 || c.getColumn() >= enemyBoard.getWidth()){
+      throw new IllegalArgumentException("Invalid cood");
+    }
+
+    return c;
+  }
+
   
   //method to take user input for placement, prints prompt before
    public Placement readPlacement(String prompt) throws IOException {
@@ -87,7 +137,6 @@ public class TextPlayer {
     try{
     Placement p = readPlacement("Player " + this.name + " where do you want to place a " + shipName + "?");
     
-
     //RectangleShip<Character> ship = new RectangleShip<Character>(p.getWhere(), 's', '*');
     //Make the required ship
     Ship<Character> ship  = createFn.apply(p);
