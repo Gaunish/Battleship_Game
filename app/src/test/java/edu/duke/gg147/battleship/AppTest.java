@@ -27,6 +27,7 @@ class AppTest {
 
   //Method to test main in app
   //gets input.txt and output.txt from dir
+  //@Disabled
   @Test
   @ResourceLock(value = Resources.SYSTEM_OUT, mode = ResourceAccessMode.READ_WRITE)
   void test_main() throws IOException {

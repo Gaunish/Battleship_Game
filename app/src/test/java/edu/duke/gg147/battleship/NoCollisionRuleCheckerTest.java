@@ -14,8 +14,8 @@ public class NoCollisionRuleCheckerTest {
 
     V1ShipFactory factory = new V1ShipFactory();
     Ship<Character> s = factory.makeSubmarine(new Placement("C5H"));
-    Ship<Character> s1 = factory.makeCarrier(new Placement("G9H"));
-    Ship<Character> s2 = factory.makeCarrier(new Placement("B5V"));
+    Ship<Character> s1 = factory.makeCarrier(new Placement("G9U"));
+    Ship<Character> s2 = factory.makeCarrier(new Placement("B5U"));
 
     assertEquals(null, check.checkMyRule(s, b));
     b.tryAddShip(s);
@@ -33,9 +33,9 @@ public class NoCollisionRuleCheckerTest {
 
     V1ShipFactory factory = new V1ShipFactory();
     Ship<Character> s = factory.makeSubmarine(new Placement("C5H"));
-    Ship<Character> s1 = factory.makeCarrier(new Placement("G9H"));
-    Ship<Character> s2 = factory.makeCarrier(new Placement("B5V"));
-    Ship<Character> s3 = factory.makeCarrier(new Placement("C4V")); 
+    Ship<Character> s1 = factory.makeCarrier(new Placement("G9U"));
+    Ship<Character> s2 = factory.makeCarrier(new Placement("B5U"));
+    Ship<Character> s3 = factory.makeCarrier(new Placement("C4U")); 
 
     assertEquals(null, check1.checkPlacement(s, b));
     b.tryAddShip(s);

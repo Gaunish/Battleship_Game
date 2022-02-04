@@ -18,9 +18,9 @@ public class V1ShipFactoryTest {
     Ship<Character> s1 = f.makeSubmarine(v1);
     checkShip(s1, "Submarine", 's', new Coordinate(3, 2), new Coordinate(3, 3));
 
-    Placement v2 = new Placement(new Coordinate(3, 2), 'V');
+    Placement v2 = new Placement(new Coordinate(3, 2), 'U');
     Ship<Character> s2 = f.makeCarrier(v2);
-    checkShip(s2, "Carrier", 'c', new Coordinate(3, 2), new Coordinate(4, 2), new Coordinate(5, 2), new Coordinate(6, 2), new Coordinate(7, 2), new Coordinate(8, 2));
+    checkShip(s2, "Carrier", 'c', new Coordinate(3, 2), new Coordinate(4, 2), new Coordinate(5, 2), new Coordinate(6, 2), new Coordinate(5, 3), new Coordinate(6, 3), new Coordinate(7, 3));
 
     Placement v3 = new Placement(new Coordinate(3, 2), 'U');
     Ship<Character> s3 = f.makeBattleship(v3);
@@ -29,7 +29,7 @@ public class V1ShipFactoryTest {
     Placement v4 = new Placement(new Coordinate(3, 2), 'X');
     assertThrows(IllegalArgumentException.class, () -> f.makeSubmarine(v4));
     assertThrows(IllegalArgumentException.class, () -> f.makeBattleship(v4));
-
+    assertThrows(IllegalArgumentException.class, () -> f.makeCarrier(v4));
 
   }
 

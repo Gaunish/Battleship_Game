@@ -23,7 +23,7 @@ public class BattleShipBoardTest {
     assertEquals("That placement is invalid: the ship overlaps another ship.", b.tryAddShip(s));
 
     //Check right side
-    Ship<Character> s1 = factory.makeCarrier(new Placement("A8V"));
+    Ship<Character> s1 = factory.makeCarrier(new Placement("A8U"));
     assertEquals("That placement is invalid: the ship goes off the right of the board.", b.tryAddShip(s1));
 
     //Check invalid placements
@@ -144,7 +144,7 @@ public class BattleShipBoardTest {
     //add ship to board
     b.tryAddShip(s);
 
-    Ship<Character> s1 = factory.makeCarrier(new Placement("A2V"));
+    Ship<Character> s1 = factory.makeCarrier(new Placement("A2U"));
     //add ship to board
     b.tryAddShip(s1);
 
@@ -161,7 +161,7 @@ public class BattleShipBoardTest {
     assertEquals(true, s.isSunk());
 
     //Test hit
-    assertSame(s1, b.fireAt(new Coordinate(5, 2)));
+    assertSame(s1, b.fireAt(new Coordinate(1, 2)));
     assertEquals(false, s1.isSunk()); 
 
   }

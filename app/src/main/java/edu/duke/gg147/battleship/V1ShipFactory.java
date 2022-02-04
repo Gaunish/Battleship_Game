@@ -14,7 +14,7 @@ public class V1ShipFactory implements AbstractShipFactory<Character> {
 
   @Override
   public Ship<Character> makeCarrier(Placement where) {
-    return createShip(where, 1, 6, 'c', "Carrier");
+    return createZShip(where, 'c', "Carrier");
   }
 
   @Override
@@ -50,4 +50,17 @@ public class V1ShipFactory implements AbstractShipFactory<Character> {
     //Create TShip
     return new TShip<Character>(name, where.getWhere(), where.getOrient(), letter, '*');
   }
+
+  //Function to abstract creation of Zship
+  //throws IllegalArgumentException for invalid orientation
+  protected Ship<Character> createZShip(Placement where, char letter, String name){
+    if(where.getOrient() != 'U' && where.getOrient() != 'L' && where.getOrient() != 'D' && where.getOrient() != 'R'){
+    //invalid orientation
+    throw new IllegalArgumentException("Invalid Placement, found : " + where.getOrient());
+    }
+    
+    //Create ZShip
+    return new ZShip<Character>(name, where.getWhere(), where.getOrient(), letter, '*');
+  }
+
 }
