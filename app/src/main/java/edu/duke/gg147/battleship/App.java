@@ -12,10 +12,10 @@ import java.io.Reader;
 
 public class App {
   //field to rep 2 players
-  final TextPlayer player1, player2;
+  final Player player1, player2;
 
   //constructor to init the class
-  public App(TextPlayer p1, TextPlayer p2) {
+  public App(Player p1, Player p2) {
     this.player1 = p1;
     this.player2 = p2;
   }
@@ -32,8 +32,8 @@ public class App {
     V1ShipFactory factory = new V1ShipFactory();
 
     //setup players
-    TextPlayer p1 = new TextPlayer("A", b1, in, System.out, factory);
-    TextPlayer p2 = new TextPlayer("B", b2, in, System.out, factory);
+    Player p1 = selectUser("A", b1, in, System.out, factory);
+    Player p2 = selectUser("B", b2, in, System.out, factory);
 
     //init the class
     App game = new App(p1, p2);
@@ -76,6 +76,36 @@ public class App {
       }
     
     }
+  }
+
+  //Method to select whether Computer is Playing or User
+  public static Player selectUser(String name, Board<Character> b, BufferedReader in, PrintStream out, AbstractShipFactory<Character> factory){
+    
+    //Prompt user for input
+    String s = "Is Player " + name +  " a human player or to be played by the computer?\nFor Human, input : H\nFor Computer, input : C\n";
+    System.out.println(s);
+
+    //read input
+    try{
+      char input = in.readLine().toUpperCase().charAt(0);
+
+      if(input == 'H'){
+        return new TextPlayer(name, b, in, out, factory);
+      }
+
+      if(input == 'C'){
+        return new ComputerPlayer(name, b, out, factory);
+      }
+
+      //Invalid input
+      System.out.println("Invalid Input, try again\n");
+      return selectUser(name, b, in, out, factory);
+    }
+    catch(Exception e){
+      System.out.println("Unexpected error, Try Again\n");
+      return selectUser(name, b, in, out, factory);
+    }
+   
   }
 
 }

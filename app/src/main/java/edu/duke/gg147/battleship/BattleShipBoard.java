@@ -96,7 +96,7 @@ public class BattleShipBoard<T> implements Board<T>{
 
     //Change the ship's location
     myShips.remove(ship);
-    myShips.add(ship);
+    myShips.add(newShip);
     return null;
   }
 

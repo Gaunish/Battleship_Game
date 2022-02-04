@@ -47,6 +47,7 @@ public class TextPlayerTest {
     }
 
   //Method to test doOneHit
+  @Disabled
   @Test
   void test_do_one_hit(){
     //Init board, app
