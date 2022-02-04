@@ -22,12 +22,13 @@ public class V1ShipFactoryTest {
     Ship<Character> s2 = f.makeCarrier(v2);
     checkShip(s2, "Carrier", 'c', new Coordinate(3, 2), new Coordinate(4, 2), new Coordinate(5, 2), new Coordinate(6, 2), new Coordinate(7, 2), new Coordinate(8, 2));
 
-    Placement v3 = new Placement(new Coordinate(3, 2), 'H');
+    Placement v3 = new Placement(new Coordinate(3, 2), 'U');
     Ship<Character> s3 = f.makeBattleship(v3);
-    checkShip(s3, "Battleship", 'b', new Coordinate(3, 2), new Coordinate(3, 3), new Coordinate(3, 4), new Coordinate(3, 5));
+    checkShip(s3, "Battleship", 'b', new Coordinate(3, 3), new Coordinate(4, 2), new Coordinate(4, 3), new Coordinate(4, 4));
 
     Placement v4 = new Placement(new Coordinate(3, 2), 'X');
     assertThrows(IllegalArgumentException.class, () -> f.makeSubmarine(v4));
+    assertThrows(IllegalArgumentException.class, () -> f.makeBattleship(v4));
 
 
   }

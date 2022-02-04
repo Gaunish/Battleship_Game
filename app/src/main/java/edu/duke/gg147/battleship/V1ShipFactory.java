@@ -9,7 +9,7 @@ public class V1ShipFactory implements AbstractShipFactory<Character> {
 
   @Override
   public Ship<Character> makeBattleship(Placement where) {
-    return createShip(where, 1, 4, 'b', "Battleship");
+    return createTShip(where, 'b', "Battleship");
   }
 
   @Override
@@ -37,5 +37,17 @@ public class V1ShipFactory implements AbstractShipFactory<Character> {
 
     //Horizontal orientation
     return new RectangleShip<Character>(name, where.getWhere(), h, w, letter, '*');
+  }
+
+  //Function to abstract creation of Tship
+  //throws IllegalArgumentException for invalid orientation
+  protected Ship<Character> createTShip(Placement where, char letter, String name){
+    if(where.getOrient() != 'U' && where.getOrient() != 'L' && where.getOrient() != 'D' && where.getOrient() != 'R'){
+    //invalid orientation
+    throw new IllegalArgumentException("Invalid Placement, found : " + where.getOrient());
+    }
+    
+    //Create TShip
+    return new TShip<Character>(name, where.getWhere(), where.getOrient(), letter, '*');
   }
 }
