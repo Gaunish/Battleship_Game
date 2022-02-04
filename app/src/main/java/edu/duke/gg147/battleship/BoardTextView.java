@@ -35,6 +35,34 @@ public class BoardTextView {
     return displayAnyBoard((c)->toDisplay.whatIsAtForEnemy(c));
   }
 
+  //Method to display two boards together
+  public String displayMyBoardWithEnemyNextToIt(BoardTextView enemyView, String myHeader, String enemyHeader) {
+    //Get own, enemyBoard in \n spllit fashion
+    String [] myBoard = displayMyOwnBoard().split("\n");
+    String [] enemyBoard = enemyView.displayMyEnemyBoard().split("\n");
+
+    //output string
+    StringBuilder out = new StringBuilder();
+    //get width of board for string formatting
+    int width = toDisplay.getWidth();
+
+    //append headers
+    out.append("     ");
+    out.append(String.format("%-" + ((2 * width) + 22) + "s", myHeader));
+    out.append(enemyHeader);
+    out.append("\n");
+
+    //append boards
+    for(int i = 0; i < myBoard.length; i++){
+      //String.format("%-" + 2 * width + 19 + "s", myBoard[i]);
+      out.append(String.format("%-" + ((2 * width) + 19) + "s", myBoard[i]));
+      out.append(enemyBoard[i]);
+      out.append("\n");
+    }
+
+    return out.toString();
+  }
+
   //method to Display own/enemy board
   protected String displayAnyBoard(Function<Coordinate, Character> getSquareFn){
     StringBuilder ans = new StringBuilder("");

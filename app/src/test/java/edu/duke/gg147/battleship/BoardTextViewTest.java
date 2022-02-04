@@ -23,6 +23,50 @@ public class BoardTextViewTest {
   }
 
   @Test
+  public void test_two_boards(){
+    Board<Character> b = new BattleShipBoard<>(2, 2, 'X');
+    Board<Character> b1 = new BattleShipBoard<>(2, 2, 'X');
+
+    StringBuilder out = new StringBuilder();
+    String head = "Your ocean";
+    out.append("     ");
+    out.append(String.format("%-26s", head));
+    out.append("Player B's ocean\n");
+
+    String header = "  0|1";
+    String header1 = "  0|1\n";
+    out.append(String.format("%-23s", header));
+    out.append(header1);
+
+    add_ship(b, 0, 0);
+    add_ship(b, 0, 1);
+    add_ship(b1, 1, 1);
+    add_ship(b1, 1, 0);
+    
+    b1.fireAt(new Coordinate(0, 0));
+    b1.fireAt(new Coordinate(1, 1));
+    b.fireAt(new Coordinate(0, 1));
+    b.fireAt(new Coordinate(1, 0));
+    
+    String row1 = "A s|* A";
+    String row2 = "B  |  B";
+    
+    out.append(String.format("%-23s", row1));
+    out.append("A X|  A\n");
+    out.append(String.format("%-23s", row2));
+    out.append("B  |s B\n");
+
+    out.append(String.format("%-23s", header));
+    out.append(header1);
+
+    BoardTextView v = new BoardTextView(b);
+    BoardTextView v1 = new BoardTextView(b1);
+
+    assertEquals(out.toString(), v.displayMyBoardWithEnemyNextToIt(v1, "Your ocean", "Player B's ocean"));
+  }
+  
+
+  @Test
   public void test_invalid_board_size() {
     Board<Character> wideBoard = new BattleShipBoard<Character>(11,20, 'X');
     Board<Character> tallBoard = new BattleShipBoard<Character>(10,27, 'X');
