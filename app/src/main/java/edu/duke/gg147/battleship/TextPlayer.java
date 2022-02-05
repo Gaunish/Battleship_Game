@@ -252,7 +252,8 @@ public class TextPlayer implements Player{
     }
     //Catch any specific exception
     catch(IllegalArgumentException|IOException e){
-      out.println("Invalid Placement, try again!\n");
+      //out.println("Invalid Placement, try again!\n");
+      out.println(e);
       takeOption(enemyBoard);
       return;
     }

@@ -48,7 +48,7 @@ public class TShip<T> extends BasicShip<T> {
   //Constructor to init RectangleShip, BasicShip
   //Uses static method to create hashset of coords before passing
   public TShip(String name, Coordinate upperLeft, Character orient, ShipDisplayInfo<T> myDisplayInfo, ShipDisplayInfo<T> enemyDisplayInfo) {
-    super(makeCoords(upperLeft, orient), myDisplayInfo, enemyDisplayInfo);
+    super(makeCoords(upperLeft, orient), myDisplayInfo, enemyDisplayInfo, upperLeft, orient);
     this.name = name;
   }
 

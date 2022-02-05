@@ -65,4 +65,8 @@ public interface Ship<T> {
    * @return An Iterable with the coordinates that this Ship occupies
    */
   public Iterable<Coordinate> getCoordinates();
+
+  //get upper-left coordinates
+  public Coordinate getUpperLeft();
+  public Character getOrient();
 }

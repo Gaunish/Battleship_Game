@@ -28,15 +28,20 @@ public class RectangleShip<T> extends BasicShip<T>{
 
   //Constructor to init RectangleShip, BasicShip
   //Uses static method to create hashset of coords before passing
-  public RectangleShip(String name, Coordinate upperLeft, int width, int height, ShipDisplayInfo<T> myDisplayInfo, ShipDisplayInfo<T> enemyDisplayInfo) {
-    super(makeCoords(upperLeft, width, height), myDisplayInfo, enemyDisplayInfo);
+  public RectangleShip(String name, Coordinate upperLeft, int width, int height, ShipDisplayInfo<T> myDisplayInfo, ShipDisplayInfo<T> enemyDisplayInfo, Character orient) {
+    super(makeCoords(upperLeft, width, height), myDisplayInfo, enemyDisplayInfo, upperLeft, orient);
     this.name = name;
   }
 
   //Helper constructor for abstraction
+  public RectangleShip(String name, Placement upperLeft, int width, int height, T data, T onHit) {
+    this(name, upperLeft.getWhere(), width, height, new SimpleShipDisplayInfo<T>(data, onHit), new SimpleShipDisplayInfo<T>(null, data), upperLeft.getOrient());
+  }
+
+
+  //Helper constructor for abstraction
   public RectangleShip(String name, Coordinate upperLeft, int width, int height, T data, T onHit) {
-    this(name, upperLeft, width, height, new SimpleShipDisplayInfo<T>(data, onHit),
-        new SimpleShipDisplayInfo<T>(null, data));
+    this(name, upperLeft, width, height, new SimpleShipDisplayInfo<T>(data, onHit), new SimpleShipDisplayInfo<T>(null, data), 'A');
   }
 
   //Helper constructor

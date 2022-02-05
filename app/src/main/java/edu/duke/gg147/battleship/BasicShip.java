@@ -14,9 +14,13 @@ public abstract class BasicShip<T> implements Ship<T>{
   //Method to display enemy board info
   protected ShipDisplayInfo<T> enemyDisplayInfo;
 
+  //upper-left coordinate, orient
+  private Coordinate start;
+  private Character orient;
+
     
   //Constructor to init all coords in where to false (ship locations) & displayinfo
-  public BasicShip(Iterable<Coordinate> where, ShipDisplayInfo<T> myDisplayInfo, ShipDisplayInfo<T> enemyDisplayInfo){
+  public BasicShip(Iterable<Coordinate> where, ShipDisplayInfo<T> myDisplayInfo, ShipDisplayInfo<T> enemyDisplayInfo, Coordinate start, Character orient){
     //init myPieces
     myPieces = new HashMap<Coordinate, Boolean>();
     
@@ -28,7 +32,19 @@ public abstract class BasicShip<T> implements Ship<T>{
     //init displays
     this.myDisplayInfo = myDisplayInfo;
     this.enemyDisplayInfo = enemyDisplayInfo;
+    this.start = start;
+    this.orient = orient;
   }
+
+  //Method to get upper-left coordinate
+  public Coordinate getUpperLeft(){
+    return start;
+  }
+  //Method to get orientation
+  public Character getOrient(){
+    return orient;
+  }
+
 
   //Checks if coord in ship
   //throws IllegalArgumentException if not present
