@@ -1,6 +1,7 @@
 package edu.duke.gg147.battleship;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class BattleShipBoard<T> implements Board<T>{
@@ -13,6 +14,10 @@ public class BattleShipBoard<T> implements Board<T>{
   private final HashSet<Coordinate> enemyMisses;
   //Info to display for a miss
   final T missInfo;
+
+  //List for move, covert misses, hits
+  private final ArrayList<Coordinate> misses;
+  private final HashMap<Coordinate, T> hits;
   
   /**
    * Constructs a BattleShipBoard with the specified width and height
@@ -39,6 +44,10 @@ public class BattleShipBoard<T> implements Board<T>{
     myShips = new ArrayList<>();
     enemyMisses = new HashSet<Coordinate>();
     missInfo = miss;
+
+    //init move lists
+    misses = new ArrayList<>();
+    hits = new HashMap<>();
   }
 
   public BattleShipBoard(int w, int h, T miss) {
@@ -84,6 +93,23 @@ public class BattleShipBoard<T> implements Board<T>{
     return null;
   }
 
+  //method to update misses
+  private void update_misses(Ship<T> ship){
+    for(Coordinate c : ship.getCoordinates()){
+      if(whatIsAtForEnemy(c) == missInfo){
+        misses.add(c);
+      }
+    }
+  }
+
+  //method to update hits
+  private void update_hits(Ship<T> ship){
+    for(Coordinate c : ship.getCoordinates()){
+      if(ship.wasHitAt(c)){
+        hits.put(c, ship.getDisplayInfoAt(c, false));
+      }
+    }
+  }
   
   //Method to add newship and remove old ship
   public String tryMoveShip(Ship<T> ship, Ship<T> newShip, Placement p){
@@ -94,9 +120,14 @@ public class BattleShipBoard<T> implements Board<T>{
       return out;
     }
 
+    //Update hits, misses table
+    update_misses(newShip);
+    update_hits(ship);
+    
     //Change the ship's location
     myShips.remove(ship);
     myShips.add(newShip);
+   
     return null;
   }
 
@@ -118,6 +149,18 @@ public class BattleShipBoard<T> implements Board<T>{
   //method to check if ship is present at the coordinate
   //if present, returns apt display info
   protected T whatIsAt(Coordinate where, boolean isSelf){
+    //Override for move method
+    //for enemy board
+    if(isSelf == false){
+      if(misses.contains(where)){
+          return missInfo;
+      }
+      if(hits.containsKey(where)){
+          return hits.get(where);
+      }
+    }   
+   
+
     for (Ship<T> s: myShips) {
       if (s.occupiesCoordinates(where)){
         return s.getDisplayInfoAt(where, isSelf);
@@ -142,6 +185,15 @@ public class BattleShipBoard<T> implements Board<T>{
   public Ship<T> fireAt(Coordinate c){
     //traverse ships
     //if any ship occupy c, record hit and return it
+
+    //Remove for hits, misses if fired there
+    if(hits.containsKey(c)){
+      hits.remove(c);
+    }
+    else if(misses.contains(c)){
+      misses.remove(c);
+    }
+    
     for(Ship<T> s : myShips){
       if (s.occupiesCoordinates(c)){
         s.recordHitAt(c);
