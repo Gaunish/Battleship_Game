@@ -11,10 +11,10 @@ public abstract class BasicShip<T> implements Ship<T>{
   protected HashMap<Coordinate, Boolean> myPieces;
   //display info of ship
   protected ShipDisplayInfo<T> myDisplayInfo;
-  //Method to display enemy board info
+  //display enemy board info
   protected ShipDisplayInfo<T> enemyDisplayInfo;
 
-  //upper-left coordinate, orient
+  //upper-left coordinate, orientation
   private Coordinate start;
   private Character orient;
 
@@ -32,15 +32,17 @@ public abstract class BasicShip<T> implements Ship<T>{
     //init displays
     this.myDisplayInfo = myDisplayInfo;
     this.enemyDisplayInfo = enemyDisplayInfo;
+
+    //init location, orientation
     this.start = start;
     this.orient = orient;
   }
 
-  //Method to get upper-left coordinate
+  //Method to get upper-left coordinate of the ship
   public Coordinate getUpperLeft(){
     return start;
   }
-  //Method to get orientation
+  //Method to get orientation of the ship
   public Character getOrient(){
     return orient;
   }
@@ -103,8 +105,5 @@ public abstract class BasicShip<T> implements Ship<T>{
   public Iterable<Coordinate> getCoordinates(){
     return myPieces.keySet();
   }
-
-  //get Coordinates where ship was hit
-  
-
+ 
 }

@@ -75,42 +75,31 @@ public class TextPlayer implements Player{
     out.println(view.displayMyBoardWithEnemyNextToIt(enemyView, "Your ocean", enemyName));
 
     //Ask user about options
-    takeOption(enemyBoard);
-
-    /*
-    //Do apt actions
-    if(opt == 'F'){
-      doOneHit(enemyBoard);
-    }
-    else if(opt == 'S'){
-      doSonarScan(enemyBoard);
-      sonar_rem -= 1;
-    }
-    else{
-      doShipMove_cood();
-      move_rem -= 1;
-      }*/
-    
+    //Do the required action based on input
+    takeOption(enemyBoard); 
   }
 
-  //Method to take option
+  //Method to take option and do the required action based on input
   public void takeOption(Board<Character> enemyBoard){
+    //Prompt to get option
     String prompt = "Possible actions for Player " + name + ":\n\n";
     prompt += "F Fire at a square\nM Move a ship to another square (" + String.valueOf(move_rem) + " remaining)\nS Sonar scan (" + String.valueOf(sonar_rem) +" remaining)\n\n";
-    prompt += "Player " + name + ", what would you like to do?\n\n";
+    prompt += "Player " + name + ", what would you like to do?\n";
 
     //take input while not correct 
     while(true){
+      //read option
       char in = readOption(prompt).toUpperCase().charAt(0);
+      //verify option
       if(in == 'F' || in == 'M' || in == 'S'){
 
         //Out of option for M,S
         if(in == 'S' && sonar_rem <= 0){
-          out.println("Sonar is out of quantity, select other options\n\n");
+          out.println("Sonar is out of quantity, select other options");
           continue;
         }
         if(in == 'M' && move_rem <= 0){
-          out.println("Move is out of quantity, select other options\n\n");
+          out.println("Move is out of quantity, select other options");
           continue;
         }
 
@@ -127,7 +116,7 @@ public class TextPlayer implements Player{
    
         break;
       }
-      out.println("Invalid Option, try again \n\n");
+      out.println("Invalid Option, try again");
     }
   }
 
@@ -206,7 +195,7 @@ public class TextPlayer implements Player{
     //Prompt for Coordinate
     try{
       //get the coords
-      Coordinate c = readCoordinate("Player " + this.name + " Enter coordinates of ship you want to move?", theBoard);
+      Coordinate c = readCoordinate("Player " + this.name + " ,Enter coordinates of ship you want to move?", theBoard);
 
       //Get the ship via coordinate
       Ship<Character> ship = theBoard.selectShip(c);
@@ -233,7 +222,7 @@ public class TextPlayer implements Player{
     //Prompt for Coordinate
     try{
       //get the coords
-      Placement p = readPlacement("Player " + this.name + "Enter new Placement of ship where you want it to be placed:");
+      Placement p = readPlacement("Player " + this.name + " ,Enter new Placement of ship where you want it to be placed:");
 
       //Make the required ship
       Ship<Character> newShip  = createFn.apply(p);

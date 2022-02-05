@@ -48,6 +48,7 @@ public class ComputerPlayer implements Player{
     shipCreationFns.put("Destroyer", (p) -> shipFactory.makeDestroyer(p));
   }
 
+  //Helper method to add placement to list
   protected void place(String s){
     placements.add(new Placement(s));
   }

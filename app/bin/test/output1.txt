@@ -1,0 +1,406 @@
+Is Player A a human player or to be played by the computer?
+For Human, input : H
+For Computer, input : C
+
+Invalid Input, try again
+
+Is Player A a human player or to be played by the computer?
+For Human, input : H
+For Computer, input : C
+
+Invalid Input, try again
+
+Is Player A a human player or to be played by the computer?
+For Human, input : H
+For Computer, input : C
+
+Is Player B a human player or to be played by the computer?
+For Human, input : H
+For Computer, input : C
+
+Player A hit your Submarine at A0!
+Player B hit your Submarine at A0!
+Player A hit your Submarine at A1!
+Player B hit your Submarine at A1!
+Player A hit your Destroyer at A2!
+Player B hit your Destroyer at A2!
+Player A hit your Destroyer at A3!
+Player B hit your Destroyer at A3!
+Player A hit your Destroyer at A4!
+Player B hit your Destroyer at A4!
+Player A hit your Carrier at A5!
+Player B hit your Carrier at A5!
+Player A missed!
+Player B missed!
+Player A hit your Carrier at A7!
+Player B hit your Carrier at A7!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Submarine at B0!
+Player B hit your Submarine at B0!
+Player A hit your Submarine at B1!
+Player B hit your Submarine at B1!
+Player A hit your Destroyer at B2!
+Player B hit your Destroyer at B2!
+Player A hit your Destroyer at B3!
+Player B hit your Destroyer at B3!
+Player A hit your Destroyer at B4!
+Player B hit your Destroyer at B4!
+Player A hit your Carrier at B5!
+Player B hit your Carrier at B5!
+Player A missed!
+Player B missed!
+Player A hit your Carrier at B7!
+Player B hit your Carrier at B7!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Destroyer at C2!
+Player B hit your Destroyer at C2!
+Player A hit your Destroyer at C3!
+Player B hit your Destroyer at C3!
+Player A hit your Destroyer at C4!
+Player B hit your Destroyer at C4!
+Player A hit your Carrier at C5!
+Player B hit your Carrier at C5!
+Player A hit your Carrier at C6!
+Player B hit your Carrier at C6!
+Player A hit your Carrier at C7!
+Player B hit your Carrier at C7!
+Player A hit your Carrier at C8!
+Player B hit your Carrier at C8!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Carrier at D5!
+Player B hit your Carrier at D5!
+Player A hit your Carrier at D6!
+Player B hit your Carrier at D6!
+Player A hit your Carrier at D7!
+Player B hit your Carrier at D7!
+Player A hit your Carrier at D8!
+Player B hit your Carrier at D8!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Carrier at E6!
+Player B hit your Carrier at E6!
+Player A missed!
+Player B missed!
+Player A hit your Carrier at E8!
+Player B hit your Carrier at E8!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Battleship at O1!
+Player B hit your Battleship at O1!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Battleship at P0!
+Player B hit your Battleship at P0!
+Player A hit your Battleship at P1!
+Player B hit your Battleship at P1!
+Player A hit your Battleship at P2!
+Player B hit your Battleship at P2!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Battleship at Q1!
+Player B hit your Battleship at Q1!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Battleship at R0!
+Player B hit your Battleship at R0!
+Player A hit your Battleship at R1!
+Player B hit your Battleship at R1!
+Player A hit your Battleship at R2!
+Player B hit your Battleship at R2!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Battleship at S1!
+Player B hit your Battleship at S1!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A missed!
+Player B missed!
+Player A hit your Battleship at T0!
+Player B hit your Battleship at T0!
+Player A hit your Battleship at T1!
+Player B hit your Battleship at T1!
+Player A hit your Battleship at T2!
+Player A won!

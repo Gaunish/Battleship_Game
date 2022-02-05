@@ -15,7 +15,7 @@ public class BattleShipBoard<T> implements Board<T>{
   //Info to display for a miss
   final T missInfo;
 
-  //List for move, covert misses, hits
+  //List for move, covert misses, hits of prev ship
   private final ArrayList<Coordinate> misses;
   private final ArrayList<Coordinate> ships;
   private final HashMap<Coordinate, T> hits;
@@ -46,12 +46,13 @@ public class BattleShipBoard<T> implements Board<T>{
     enemyMisses = new HashSet<Coordinate>();
     missInfo = miss;
 
-    //init move lists
+    //init lists used for move ship
     misses = new ArrayList<>();
     ships = new ArrayList<>(); 
     hits = new HashMap<>();
   }
 
+  //Helper constructor
   public BattleShipBoard(int w, int h, T miss) {
     this(w, h, new InBoundsRuleChecker<T>(null), miss);
   }
@@ -95,7 +96,7 @@ public class BattleShipBoard<T> implements Board<T>{
     return null;
   }
 
-  //method to update misses
+  //method to update misses list
   private void update_misses(Ship<T> ship){
     for(Coordinate c : ship.getCoordinates()){
       if(whatIsAtForEnemy(c) == missInfo){
@@ -104,7 +105,7 @@ public class BattleShipBoard<T> implements Board<T>{
     }
   }
 
-  //method to update hits
+  //method to update hits list
   private void update_hits(Ship<T> ship){
     for(Coordinate c : ship.getCoordinates()){
       if(ship.wasHitAt(c)){
@@ -113,7 +114,8 @@ public class BattleShipBoard<T> implements Board<T>{
     }
   }
 
-  //Method to make hits on newships relativee to ship
+  //Method to make hits on newShips relative to old ship
+  //Also updates Hits List 
   private void makeHits(Ship<T> ship, Ship<T> newShip, Placement p){
     //get coord, orientation of new ship
     Coordinate c = newShip.getUpperLeft();
@@ -121,20 +123,25 @@ public class BattleShipBoard<T> implements Board<T>{
     int col = c.getColumn();
     Character orient = newShip.getOrient();
 
-    //get upper-left coordinate of old ship
+    //get coordinate, orientation of old ship
     Coordinate c_old = ship.getUpperLeft();
     int row_old = c_old.getRow();
     int col_old = c_old.getColumn();
     Character orient_old = ship.getOrient();
 
+    //Compute coordinate difference between new ship and old ship
     int row_diff = row - row_old;
     int col_diff = col - col_old;
     
-    //Rectangular ships
+    //Case for Rectangular ships
     if(orient == 'H' || orient == 'V' ){
+      //traverse old ship coords
       for(Coordinate pos : ship.getCoordinates()){
         if(ship.wasHitAt(pos)){
+
+          //If same orientation
           if(orient_old == orient){
+            //Calculate position 
             int row_n = pos.getRow() + row_diff;
             int col_n = pos.getColumn() + col_diff;
             ships.add(new Coordinate(row_n, col_n));
@@ -142,15 +149,16 @@ public class BattleShipBoard<T> implements Board<T>{
             newShip.recordHitAt(new Coordinate(row_n, col_n));
           }
           else{
+            //Get difference between current coordinate and oldship coords
             int c_row_diff = pos.getRow() - row_old;
             int c_col_diff = pos.getColumn() - col_old;
 
+            //calculate position
             int row_n = pos.getRow() + row_diff + c_col_diff - c_row_diff;
             int col_n = pos.getColumn() + col_diff + c_row_diff - c_col_diff;
             ships.add(new Coordinate(row_n, col_n));
 
-            
-              newShip.recordHitAt(new Coordinate(row_n, col_n));
+            newShip.recordHitAt(new Coordinate(row_n, col_n));
           }
             
         }
@@ -158,13 +166,16 @@ public class BattleShipBoard<T> implements Board<T>{
       return;
     }
 
+    //Other case -TShip, Zship
     int no_hit = 0;
+    //Get no of coordinates hit
     for(Coordinate pos : ship.getCoordinates()){
         if(ship.wasHitAt(pos)){
           no_hit += 1;
         }
     }
 
+    //Update same no of hits in new ship
     int i = 0;
     for(Coordinate pos : newShip.getCoordinates()){
         if(i >= no_hit){
@@ -233,7 +244,7 @@ public class BattleShipBoard<T> implements Board<T>{
       }
     }   
    
-
+    //Normal cases
     for (Ship<T> s: myShips) {
       if (s.occupiesCoordinates(where)){
         return s.getDisplayInfoAt(where, isSelf);
@@ -259,7 +270,7 @@ public class BattleShipBoard<T> implements Board<T>{
     //traverse ships
     //if any ship occupy c, record hit and return it
 
-    //Remove for hits, misses if fired there
+    //Remove for hits, misses, ship hits if fired there
     if(ships.contains(c)){
       ships.remove(c);
     }
@@ -299,12 +310,15 @@ public class BattleShipBoard<T> implements Board<T>{
     //track upper half
     for(int i = -3; i <= 0; i++){
       for(int j = 0; j < row_len; j++){
+        //calculate positions
         int row_c = row + i;
         int col = column + start + j;
-        
+
+        //if invalid, skip
         if(row_c < 0 || row_c >= height || col < 0 || col >= width){
           continue;
         }
+        //check which ship occupy coords
         Coordinate check = new Coordinate(row_c, col);
         for(Ship<T> ship : myShips){
            if (ship.occupiesCoordinates(check)){
@@ -332,13 +346,16 @@ public class BattleShipBoard<T> implements Board<T>{
     start = -2;
     for(int i = 1; i < 4; i++){
       for(int j = 0; j < row_len; j++){
+        //calculate coordinate
         int row_c = row + i;
         int col = column + start + j;
-        
+
+        //if invalid skip
         if(row_c < 0 || row_c >= height || col < 0 || col >= width){
           continue;
         }
-       
+
+        //check the coordinate
         Coordinate check = new Coordinate(row_c, col);
         for(Ship<T> ship : myShips){
            if (ship.occupiesCoordinates(check)){
@@ -361,6 +378,7 @@ public class BattleShipBoard<T> implements Board<T>{
       row_len -= 2;
     }
 
+    //Output string
     String out = "";
     out += "Submarines occupy " + String.valueOf(s) + " squares\n";
     out += "Destroyers occupy " + String.valueOf(d) + " squares\n";

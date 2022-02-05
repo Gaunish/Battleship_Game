@@ -28,6 +28,7 @@ public class App {
     Board<Character> b2 = new BattleShipBoard<Character>(10, 20, 'X');
 
     //setup input, factory
+    //check if human or computer
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     V1ShipFactory factory = new V1ShipFactory();
 
@@ -89,10 +90,12 @@ public class App {
     try{
       char input = in.readLine().toUpperCase().charAt(0);
 
+      //human inputted
       if(input == 'H'){
         return new TextPlayer(name, b, in, out, factory);
       }
 
+      //computer inputted
       if(input == 'C'){
         return new ComputerPlayer(name, b, out, factory);
       }
@@ -101,6 +104,7 @@ public class App {
       System.out.println("Invalid Input, try again\n");
       return selectUser(name, b, in, out, factory);
     }
+    //Unexpected error
     catch(Exception e){
       System.out.println("Unexpected error, Try Again\n");
       return selectUser(name, b, in, out, factory);

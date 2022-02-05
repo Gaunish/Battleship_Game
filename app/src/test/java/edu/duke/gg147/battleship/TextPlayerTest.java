@@ -47,7 +47,7 @@ public class TextPlayerTest {
     }
 
   //Method to test doOneHit
-  @Disabled
+  /*
   @Test
   void test_do_one_hit(){
     //Init board, app
@@ -80,7 +80,7 @@ public class TextPlayerTest {
     player.doOneHit(b);
     assertEquals(out, bytes.toString());
     bytes.reset();*/
-    
+  /*    
     String out = "";
     out += "Player A where do you want to hit on board?\n";
     out += "Invalid Coordinates, try again!\n";
@@ -95,7 +95,7 @@ public class TextPlayerTest {
     assertEquals(out, bytes.toString());
     bytes.reset();
   }
-    
+  */
   
   //Method to test readCoordinate
   @Test

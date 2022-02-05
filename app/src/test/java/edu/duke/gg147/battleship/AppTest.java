@@ -27,7 +27,6 @@ class AppTest {
 
   //Method to test main in app
   //gets input.txt and output.txt from dir
-  @Disabled
   @Test
   @ResourceLock(value = Resources.SYSTEM_OUT, mode = ResourceAccessMode.READ_WRITE)
   void test_main() throws IOException {
@@ -41,11 +40,11 @@ class AppTest {
     //find output.txt
     InputStream expectedStream = getClass().getClassLoader().getResourceAsStream("output.txt");
     assertNotNull(expectedStream);
-
+    
     //setup in,out to default
     InputStream oldIn = System.in;
     PrintStream oldOut = System.out;
-
+    
     //try to setup in,out to our own
     try {
       System.setIn(input);
@@ -62,5 +61,83 @@ class AppTest {
     String actual = bytes.toString();
 
     assertEquals(expected, actual);
+    bytes.flush();
+    
   }
+
+  @Test
+  @ResourceLock(value = Resources.SYSTEM_OUT, mode = ResourceAccessMode.READ_WRITE)
+  void test_main1() throws IOException {
+  ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+    PrintStream out = new PrintStream(bytes, true);
+
+    //find input.txt
+    InputStream input = getClass().getClassLoader().getResourceAsStream("input1.txt");
+    assertNotNull(input);
+
+    //find output.txt
+    InputStream expectedStream = getClass().getClassLoader().getResourceAsStream("output1.txt");
+    assertNotNull(expectedStream);
+    
+    //setup in,out to default
+    InputStream oldIn = System.in;
+    PrintStream oldOut = System.out;
+    
+    //try to setup in,out to our own
+    try {
+      System.setIn(input);
+      System.setOut(out);
+      App.main(new String[0]);
+    }
+    finally {
+      System.setIn(oldIn);
+      System.setOut(oldOut);
+    }
+
+    //Compare expected and actual output
+    String expected = new String(expectedStream.readAllBytes());
+    String actual = bytes.toString();
+
+    assertEquals(expected, actual);
+    bytes.flush();
+  }
+
+
+  @Test
+  @ResourceLock(value = Resources.SYSTEM_OUT, mode = ResourceAccessMode.READ_WRITE)
+  void test_main2() throws IOException {
+  ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+    PrintStream out = new PrintStream(bytes, true);
+
+    //find input.txt
+    InputStream input = getClass().getClassLoader().getResourceAsStream("input2.txt");
+    assertNotNull(input);
+
+    //find output.txt
+    InputStream expectedStream = getClass().getClassLoader().getResourceAsStream("output2.txt");
+    assertNotNull(expectedStream);
+    
+    //setup in,out to default
+    InputStream oldIn = System.in;
+    PrintStream oldOut = System.out;
+    
+    //try to setup in,out to our own
+    try {
+      System.setIn(input);
+      System.setOut(out);
+      App.main(new String[0]);
+    }
+    finally {
+      System.setIn(oldIn);
+      System.setOut(oldOut);
+    }
+
+    //Compare expected and actual output
+    String expected = new String(expectedStream.readAllBytes());
+    String actual = bytes.toString();
+
+    assertEquals(expected, actual);
+    bytes.flush();
+  }
+  
 }

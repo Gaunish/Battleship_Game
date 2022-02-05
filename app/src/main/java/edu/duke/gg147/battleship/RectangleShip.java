@@ -33,10 +33,10 @@ public class RectangleShip<T> extends BasicShip<T>{
     this.name = name;
   }
 
-  //Helper constructor for abstraction
+  /*  //Helper constructor for abstraction
   public RectangleShip(String name, Placement upperLeft, int width, int height, T data, T onHit) {
     this(name, upperLeft.getWhere(), width, height, new SimpleShipDisplayInfo<T>(data, onHit), new SimpleShipDisplayInfo<T>(null, data), upperLeft.getOrient());
-  }
+    }*/
 
 
   //Helper constructor for abstraction

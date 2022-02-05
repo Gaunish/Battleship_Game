@@ -41,7 +41,21 @@ public interface Board<T> {
    * @return True if player has lost, else false
    **/
   public boolean hasLost();
+  /** Method to select ship present at coordinate
+   * @param where, Coordinate to check
+   * @return ship occuping coord, if no ship - returns null
+   **/
   public Ship<T> selectShip(Coordinate where);
+
+  /** Method to move ship
+   * @param, ship - old ship, newShip - ship at new position, placement inputted
+   * @return null if successful, else error message
+   **/
   public String tryMoveShip(Ship<T> ship, Ship<T> newShip, Placement p);
+
+  /** Method to Sonar scan
+   * @param where - location to do scan around
+   * @return output string
+   **/
   public String sonarScan(Coordinate where);
 }

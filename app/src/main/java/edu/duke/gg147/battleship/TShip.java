@@ -58,11 +58,7 @@ public class TShip<T> extends BasicShip<T> {
         new SimpleShipDisplayInfo<T>(null, data));
   }
 
-  /*
-  //Helper constructor
-  public TShip(Coordinate upperLeft, T data, T onHit) {
-    this("testship", upperLeft, 'U', data, onHit);
-    }*/
+  
 
   @Override
   //getter function for name

@@ -66,7 +66,14 @@ public interface Ship<T> {
    */
   public Iterable<Coordinate> getCoordinates();
 
-  //get upper-left coordinates
+  /**
+   * get upper-left coordinates of the ship
+   * @return coordinate 
+   */
   public Coordinate getUpperLeft();
+  /**
+   * get orientation of the ship
+   * @return character representation
+   */
   public Character getOrient();
 }
