@@ -15,5 +15,5 @@ public interface Player {
    *   @param enemy board, its view and his/her name
    *  @returns void
    **/
-  public void playOneTurn(Board<Character> enemyBoard, BoardTextView enemyView, String enemyName);
+  public void playOneTurn(Board<Character> enemyBoard, BoardTextView enemyView, String enemyName) throws IOException;
 }

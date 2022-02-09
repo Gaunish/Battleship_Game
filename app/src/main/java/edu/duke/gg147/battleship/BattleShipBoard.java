@@ -226,12 +226,12 @@ public class BattleShipBoard<T> implements Board<T>{
   public T whatIsAtForSelf(Coordinate where) {
     return whatIsAt(where, true);
   }
-  
+
   //method to check if ship is present at the coordinate
   //if present, returns apt display info
   protected T whatIsAt(Coordinate where, boolean isSelf){
     //Override for move method
-    //for enemy board
+    //to keep enemy board constant
     if(isSelf == false){
       if(misses.contains(where)){
           return missInfo;
@@ -293,8 +293,8 @@ public class BattleShipBoard<T> implements Board<T>{
     return null;
   }
 
-  //Method to do sonar scan around coordinate c
-  public String sonarScan(Coordinate where){
+ //Method to do sonar scan around coordinate c
+ public String sonarScan(Coordinate where){
     //No of coords occupied by each shi[
     int s = 0;
     int c = 0;

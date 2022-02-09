@@ -68,7 +68,7 @@ public class TextPlayer implements Player{
   }
 
   //Method to play one turn for user
-  public void playOneTurn(Board<Character> enemyBoard, BoardTextView enemyView, String enemyName){
+  public void playOneTurn(Board<Character> enemyBoard, BoardTextView enemyView, String enemyName) throws IOException{
     out.println("Player " + name + "'s turn:\n");
 
     //display boards
@@ -80,7 +80,7 @@ public class TextPlayer implements Player{
   }
 
   //Method to take option and do the required action based on input
-  public void takeOption(Board<Character> enemyBoard){
+  public void takeOption(Board<Character> enemyBoard) throws IOException{
     //Prompt to get option
     String prompt = "Possible actions for Player " + name + ":\n\n";
     prompt += "F Fire at a square\nM Move a ship to another square (" + String.valueOf(move_rem) + " remaining)\nS Sonar scan (" + String.valueOf(sonar_rem) +" remaining)\n\n";
@@ -89,7 +89,15 @@ public class TextPlayer implements Player{
     //take input while not correct 
     while(true){
       //read option
-      char in = readOption(prompt).toUpperCase().charAt(0);
+      String input = readOption(prompt);
+
+      //check if input is null
+      if(input.length() != 1){
+        out.println("Invalid input, try again");
+        continue;
+      }
+      
+      Character in = input.toUpperCase().charAt(0);
       //verify option
       if(in == 'F' || in == 'M' || in == 'S'){
 
@@ -121,20 +129,14 @@ public class TextPlayer implements Player{
   }
 
   //method to take user input for action to do
-   public String readOption(String prompt){
+   public String readOption(String prompt) throws IOException{
     out.println(prompt);
-    try{
-      String s = inputReader.readLine();
-      return s;
-    }
-    catch(IOException e){
-      out.println("Unexpected error");
-    }
-    return null;
+    String s = inputReader.readLine();
+    return s;
   }
 
   //Method to take coordinate from user and do a hit
-  public void doOneHit(Board<Character> enemyBoard){
+  public void doOneHit(Board<Character> enemyBoard) throws IOException{
     //Prompt for Coordinate
     try{
       //get the coords
@@ -161,7 +163,7 @@ public class TextPlayer implements Player{
   }
 
   //Method to do a sonar scan on enemy board
-  public void doSonarScan(Board<Character> enemyBoard){
+  public void doSonarScan(Board<Character> enemyBoard) throws IOException{
     //Prompt for Coordinate
     try{
       //get the coords
@@ -184,14 +186,14 @@ public class TextPlayer implements Player{
     }
   }
 
-  private void retryShipMove(String message, Board<Character> enemyBoard){
+  private void retryShipMove(String message, Board<Character> enemyBoard) throws IOException{
       out.println(message);
       takeOption(enemyBoard);
       return;
   }
   
   //Method to do ship move from one location to another
-  private void doShipMove_cood(Board<Character> enemyBoard){
+  private void doShipMove_cood(Board<Character> enemyBoard) throws IOException{
     //Prompt for Coordinate
     try{
       //get the coords
@@ -218,7 +220,7 @@ public class TextPlayer implements Player{
   }
 
   //Method to do ship move from one location to another
-  private void doShipMove_placement(Ship<Character> ship, Function<Placement, Ship<Character>> createFn, Board<Character> enemyBoard){
+  private void doShipMove_placement(Ship<Character> ship, Function<Placement, Ship<Character>> createFn, Board<Character> enemyBoard) throws IOException{
     //Prompt for Coordinate
     try{
       //get the coords
@@ -241,8 +243,8 @@ public class TextPlayer implements Player{
     }
     //Catch any specific exception
     catch(IllegalArgumentException|IOException e){
-      //out.println("Invalid Placement, try again!\n");
-      out.println(e);
+      out.println("Invalid Placement, try again!\n");
+      //out.println(e);
       takeOption(enemyBoard);
       return;
     }

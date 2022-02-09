@@ -32,11 +32,11 @@ public class V1ShipFactory implements AbstractShipFactory<Character> {
     
     //vertical orientation
     if(where.getOrient() == 'V'){
-      return new RectangleShip<Character>(name, where.getWhere(), w, h, letter, '*');
+      return new RectangleShip<Character>(name, where.getWhere(), w, h, letter, '*', where.getOrient());
     }
 
     //Horizontal orientation
-    return new RectangleShip<Character>(name, where.getWhere(), h, w, letter, '*');
+    return new RectangleShip<Character>(name, where.getWhere(), h, w, letter, '*', where.getOrient());
   }
 
   //Function to abstract creation of Tship

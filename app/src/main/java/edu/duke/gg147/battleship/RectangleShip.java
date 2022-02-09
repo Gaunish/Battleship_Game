@@ -40,13 +40,13 @@ public class RectangleShip<T> extends BasicShip<T>{
 
 
   //Helper constructor for abstraction
-  public RectangleShip(String name, Coordinate upperLeft, int width, int height, T data, T onHit) {
-    this(name, upperLeft, width, height, new SimpleShipDisplayInfo<T>(data, onHit), new SimpleShipDisplayInfo<T>(null, data), 'A');
+  public RectangleShip(String name, Coordinate upperLeft, int width, int height, T data, T onHit, Character orient) {
+    this(name, upperLeft, width, height, new SimpleShipDisplayInfo<T>(data, onHit), new SimpleShipDisplayInfo<T>(null, data), orient);
   }
 
   //Helper constructor
   public RectangleShip(Coordinate upperLeft, T data, T onHit) {
-    this("testship", upperLeft, 1, 1, data, onHit);
+    this("testship", upperLeft, 1, 1, data, onHit, 'A');
   }
 
   @Override

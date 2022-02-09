@@ -12,7 +12,7 @@ public class RectangleShipTest {
   public void test_BasicShipMethods() {
     //Init ship
     // create 2x3 rectangle starting at (row = 2, col = 2)   
-    RectangleShip<Character> t = new RectangleShip<Character>("hi", new Coordinate(1, 2), 2, 2, 's', '*');
+    RectangleShip<Character> t = new RectangleShip<Character>("hi", new Coordinate(1, 2), 2, 2, 's', '*', 'H');
 
     //checks coordinate in ship
     //adds a hit and test if marked
@@ -25,7 +25,7 @@ public class RectangleShipTest {
     assertThrows(IllegalArgumentException.class, () -> t.wasHitAt(new Coordinate(3, 2)));
 
     //single location ship
-    RectangleShip<Character> t2 = new RectangleShip<Character>("hi", new Coordinate(4, 9), 1, 1, 's', '*');
+    RectangleShip<Character> t2 = new RectangleShip<Character>("hi", new Coordinate(4, 9), 1, 1, 's', '*', 'H');
     test_coods(t2, 4, 9);
 
     //assertEquals(true, t.isSunk());
@@ -55,7 +55,7 @@ public class RectangleShipTest {
     int width = 2;
     int height = 3;
 
-    BasicShip<Character> t = new RectangleShip<Character>("hi", cood, width, height, 's', '*');
+    BasicShip<Character> t = new RectangleShip<Character>("hi", cood, width, height, 's', '*', 'H');
 
     //Test getCoordinates
     Iterable<Coordinate> test_set = t.getCoordinates(); 
@@ -72,7 +72,7 @@ public class RectangleShipTest {
     add_cood(3, 3, t);
 
     //test single piece
-    RectangleShip<Character> t2 = new RectangleShip<Character>("hi", new Coordinate(4, 9), 1, 1, 's', '*');
+    RectangleShip<Character> t2 = new RectangleShip<Character>("hi", new Coordinate(4, 9), 1, 1, 's', '*', 'H');
     add_cood(4, 9, t2);
     assertEquals(false, t.occupiesCoordinates(new Coordinate(4, 10)));
 

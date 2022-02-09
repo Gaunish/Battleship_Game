@@ -57,7 +57,7 @@ public class App {
   //Method to play second phase of game -> player attack each other board till one wins
   public void doAttackingPhase(Board<Character> b1, Board<Character> b2) throws IOException{
     //Loop continues till one of the player wins
-    while(b1.hasLost() == false && b2.hasLost() == false){
+    while(true){
       //Player A turn
       player1.playOneTurn(b2, new BoardTextView(b2), "Player B's ocean");
 
@@ -80,14 +80,13 @@ public class App {
   }
 
   //Method to select whether Computer is Playing or User
-  public static Player selectUser(String name, Board<Character> b, BufferedReader in, PrintStream out, AbstractShipFactory<Character> factory){
+  public static Player selectUser(String name, Board<Character> b, BufferedReader in, PrintStream out, AbstractShipFactory<Character> factory) throws IOException{
     
     //Prompt user for input
     String s = "Is Player " + name +  " a human player or to be played by the computer?\nFor Human, input : H\nFor Computer, input : C\n";
     System.out.println(s);
 
     //read input
-    try{
       char input = in.readLine().toUpperCase().charAt(0);
 
       //human inputted
@@ -103,12 +102,13 @@ public class App {
       //Invalid input
       System.out.println("Invalid Input, try again\n");
       return selectUser(name, b, in, out, factory);
-    }
+      //}
     //Unexpected error
-    catch(Exception e){
-      System.out.println("Unexpected error, Try Again\n");
-      return selectUser(name, b, in, out, factory);
-    }
+    //catch(Exception e){
+      //System.out.println("Unexpected error, Try Again\n");
+      //return selectUser(name, b, in, out, factory);
+      //return null;
+    // }
    
   }
 
