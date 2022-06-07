@@ -14,5 +14,5 @@ Then, in attacking phase, User attack each other board, with additional actions 
 
 A player wins, when they hit all of enemy ship grids on enemy board.
 
-###Enjoy!
+**Enjoy!**
 
